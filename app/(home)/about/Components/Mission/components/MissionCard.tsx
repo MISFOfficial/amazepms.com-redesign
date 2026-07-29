@@ -49,8 +49,8 @@ export const MissionCard: React.FC<MissionCardProps> = ({ item }) => {
             item.iconType === "target"
               ? "border-orange-500"
               : item.iconType === "eye"
-              ? "border-blue-600"
-              : "border-indigo-600"
+                ? "border-blue-600"
+                : "border-indigo-600"
           }`}
         />
 
