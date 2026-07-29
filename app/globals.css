@@ -10,3 +10,7 @@
 .primary-rounded {
   @apply rounded-md;
 }
+
+.ratio {
+  @apply max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-0
+}

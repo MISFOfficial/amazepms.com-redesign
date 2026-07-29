@@ -19,8 +19,8 @@ export function Navigation() {
       <TopInfoBar />
 
       {/* Main Flat Light Navigation Bar */}
-      <div className="bg-(--white) border-b border-slate-200 py-3 primary-rounded shadow-none">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
+      <div className="bg-(--white) border-b border-(--black)/10 py-3 primary-rounded shadow-none">
+        <div className="ratio flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <Logo />
 
