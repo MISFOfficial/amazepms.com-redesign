@@ -161,7 +161,9 @@ export const WhyCardStack: React.FC = () => {
 
                     {/* Stat Badge */}
                     <div className="flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shrink-0">
-                      <Layers className={`w-4 h-4 sm:w-5 sm:h-5 ${theme.accent}`} />
+                      <Layers
+                        className={`w-4 h-4 sm:w-5 sm:h-5 ${theme.accent}`}
+                      />
                       <div className="text-right">
                         <span
                           className={`text-lg sm:text-2xl font-mono font-extrabold block leading-none ${theme.statColor}`}
