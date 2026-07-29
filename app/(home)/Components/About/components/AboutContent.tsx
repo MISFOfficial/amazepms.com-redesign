@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 
 export const AboutContent: React.FC = () => {
   return (
@@ -11,44 +12,53 @@ export const AboutContent: React.FC = () => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="space-y-5 lg:pl-4"
+      className="space-y-6 lg:pl-2"
     >
-      {/* Top Tag Badge */}
-      <div className="inline-block px-3 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-md tracking-wide">
-        About Amaze PMS
-      </div>
-
-      {/* Main Headline matching reference screenshot typography */}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-medium text-slate-900 tracking-tight leading-[1.15]">
-        Comfort Meets Elegance
+      {/* Title */}
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0c1e4a] tracking-tight">
+        About Us
       </h2>
 
       {/* Description Paragraph */}
-      <p className="text-xs sm:text-sm text-slate-500 leading-relaxed font-normal">
-        Amaze PMS Pvt Ltd (AMAZE) is a Property Management division of ACTION GROUP of Companies founded in the year 2001 by Mr. Subhani Abdul, a veteran from the Indian Navy and Certified Security Practitioner. Headquartered in Cyberabad, Telangana, Amaze provides Property Management Solutions PAN INDIA with a 15,000+ strong workforce of professionals. We specialize in comprehensive in-house Housekeeping, MEP, Security, Pest Control, Gardening, STP & WTP, and Deep Cleaning services.
+      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+        Amaze PMS Pvt Ltd (AMAZE) is a Property Management division of ACTION GROUP of Companies founded in the year 2001 by Mr. Subhani Abdul a veteran from the Indian Navy, a Certified Security Practitioner, and a renowned name in the Service Industry. Amaze has its Head Quarters in Cyberabad, Telangana - INDIA, providing Property Management Solutions PAN INDIA, partnering with leading clientele with 15000 + strong strength of professionals. We specialize in offering comprehensive integrated Property Management Services such as Housekeeping, MEP (Mechanical, Electrical, Plumbing), Security, Pest Control, Gardening, STP & WTP, Parking, Swimming Pool Maintenance, office support services, deep cleaning services etc all these services are inhouse.
       </p>
 
-      {/* Checkmarks List matching reference screenshot */}
-      <div className="space-y-3 pt-2 text-xs sm:text-sm font-medium text-slate-700">
-        <div className="flex items-center gap-3">
-          <Check className="w-4 h-4 text-amber-700 stroke-[2.5] shrink-0" />
-          <span>Strong 15000+ Work Force</span>
+      {/* Blue Circle Checkmarks List matching reference screenshot */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+        <div className="flex items-center gap-2.5">
+          <CheckCircle2 className="w-5 h-5 text-blue-600 fill-blue-600 stroke-white shrink-0" />
+          <span className="text-xs sm:text-sm font-semibold text-slate-700">
+            Strong 15000+ Work Force
+          </span>
         </div>
 
-        <div className="flex items-center gap-3">
-          <Check className="w-4 h-4 text-amber-700 stroke-[2.5] shrink-0" />
-          <span>200+ Corporate & Residential Clients</span>
+        <div className="flex items-center gap-2.5">
+          <CheckCircle2 className="w-5 h-5 text-blue-600 fill-blue-600 stroke-white shrink-0" />
+          <span className="text-xs sm:text-sm font-semibold text-slate-700">
+            200+ Clients
+          </span>
         </div>
 
-        <div className="flex items-center gap-3">
-          <Check className="w-4 h-4 text-amber-700 stroke-[2.5] shrink-0" />
-          <span>Fully integrated in-house service management</span>
+        <div className="flex items-center gap-2.5">
+          <CheckCircle2 className="w-5 h-5 text-blue-600 fill-blue-600 stroke-white shrink-0" />
+          <span className="text-xs sm:text-sm font-semibold text-slate-700">
+            Presence PAN INDIA
+          </span>
         </div>
+      </div>
 
-        <div className="flex items-center gap-3">
-          <Check className="w-4 h-4 text-amber-700 stroke-[2.5] shrink-0" />
-          <span>PAN India presence with ISO certification</span>
-        </div>
+      {/* Pill Button: GET STARTED WITH US */}
+      <div className="pt-2">
+        <Link
+          href="/contact"
+          className="inline-flex items-center justify-between gap-4 bg-white hover:bg-slate-50 border-2 border-blue-600 text-blue-600 px-6 py-2.5 rounded-full transition-all duration-300 shadow-xs group font-semibold text-xs tracking-wider"
+        >
+          <span>GET STARTED WITH US</span>
+          <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs">
+            <ArrowRight className="w-4 h-4" />
+          </div>
+        </Link>
       </div>
     </motion.div>
   );
