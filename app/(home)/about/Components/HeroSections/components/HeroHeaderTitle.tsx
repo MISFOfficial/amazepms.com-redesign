@@ -22,7 +22,9 @@ export const HeroHeaderTitle: React.FC = () => {
 
       {/* Short Clean Subtitle */}
       <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-sans max-w-2xl mx-auto">
-        Empowering 500+ commercial towers and gated communities across PAN India with 100% in-house workforce, military-grade compliance, and cost-saving audits.
+        Empowering 500+ commercial towers and gated communities across PAN India
+        with 100% in-house workforce, military-grade compliance, and cost-saving
+        audits.
       </p>
     </div>
   );
