@@ -1,73 +1,46 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TopInfoBar from "./components/TopInfoBar";
 import Logo from "./components/Logo";
 import NavLinks from "./components/NavLinks";
 import SearchBar from "./components/SearchBar";
 import HamburgerButton from "./components/HamburgerButton";
 import SideDrawer from "./components/SideDrawer";
-import { Sparkles, PhoneCall } from "lucide-react";
 import Link from "next/link";
-import { EmergencyContact } from "./Nav";
+import { ArrowUpRight } from "lucide-react";
 
 export function Navigation() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 15) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <header className="sticky top-0 z-40 w-full transition-all duration-300">
-      {/* Top Utility Helpline Strip */}
-      <TopInfoBar onOpenQuote={() => setIsDrawerOpen(true)} />
+    <header className="sticky top-0 z-40 w-full rounded-none shadow-none">
+      {/* Top Helpline Utility Bar */}
+      <TopInfoBar />
 
-      {/* Main Glassmorphic Header */}
-      <div
-        className={`bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all duration-300 ${
-          isScrolled ? "shadow-md shadow-slate-900/5 py-3" : "py-3.5"
-        }`}
-      >
+      {/* Main Flat Light Navigation Bar */}
+      <div className="bg-white border-b border-slate-200 py-3 rounded-none shadow-none">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <Logo />
 
-          {/* Center Navigation Links (Desktop) */}
+          {/* Nav Links (Desktop) */}
 
-          {/* Right Side: Search, CTA and Drawer Toggle */}
-          <div className="flex items-center gap-3">
+          {/* Search, CTA & Hamburger Drawer Toggle */}
+          <div className="flex items-center gap-2.5">
             {/* Search Bar */}
             <SearchBar onSearchSelect={() => setIsDrawerOpen(false)} />
 
-            {/* Quick Consultation CTA */}
+            {/* Flat Action Pill/Box Button */}
             <Link
               href="/contact"
-              className="hidden sm:flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all shadow-sm hover:shadow-blue-500/20"
+              className="hidden xl:flex items-center gap-1 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold uppercase tracking-wider px-3.5 py-2 transition-colors rounded-none shadow-none border border-slate-900"
             >
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Get Service Quote</span>
+              <span>Get Quote</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-blue-400" />
             </Link>
 
-            {/* Emergency Call Icon (Mobile) */}
-            <a
-              href={`tel:${EmergencyContact.phone}`}
-              className="sm:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200"
-              aria-label="Call Emergency Helpline"
-            >
-              <PhoneCall className="w-4 h-4" />
-            </a>
-
-            {/* Hamburger Button */}
+            {/* Square Hamburger Menu Button */}
             <HamburgerButton
               isOpen={isDrawerOpen}
               onToggle={() => setIsDrawerOpen((prev) => !prev)}
@@ -76,7 +49,7 @@ export function Navigation() {
         </div>
       </div>
 
-      {/* Smooth Side Drawer */}
+      {/* Side Drawer */}
       <SideDrawer
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}

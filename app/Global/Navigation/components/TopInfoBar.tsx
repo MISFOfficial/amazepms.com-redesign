@@ -1,25 +1,20 @@
 "use client";
 
 import React from "react";
-import { Phone, Clock, Mail, ShieldCheck, Sparkles } from "lucide-react";
+import { Phone, Clock, Mail } from "lucide-react";
 import { EmergencyContact } from "../Nav";
 
-interface TopInfoBarProps {
-  onOpenQuote?: () => void;
-}
-
-export const TopInfoBar: React.FC<TopInfoBarProps> = ({ onOpenQuote }) => {
+export const TopInfoBar: React.FC = () => {
   return (
-    <div className="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 hidden lg:block">
+    <div className="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 hidden lg:block rounded-none shadow-none">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Left Side: Live Service Status & Working Hours */}
+        {/* Left Side */}
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            <span className="h-2 w-2 bg-emerald-500 rounded-none"></span>
+            <span className="text-emerald-400 font-semibold tracking-wide">
+              24/7 Emergency Service Center
             </span>
-            <span className="text-emerald-400 font-semibold tracking-wide">24/7 Emergency Service Center</span>
           </div>
 
           <div className="flex items-center gap-1.5 text-slate-400">
@@ -28,7 +23,7 @@ export const TopInfoBar: React.FC<TopInfoBarProps> = ({ onOpenQuote }) => {
           </div>
         </div>
 
-        {/* Right Side: Direct Hotline & Support Email */}
+        {/* Right Side */}
         <div className="flex items-center gap-6">
           <a
             href={`tel:${EmergencyContact.phone}`}

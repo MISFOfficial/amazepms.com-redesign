@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { Search, X, Sparkles, ArrowRight, Wrench } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { Nav } from "../Nav";
 import Link from "next/link";
 
@@ -28,47 +28,69 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
   }, []);
 
   const filteredNav = Nav.filter((item) =>
-    item.title.toLowerCase().includes(query.toLowerCase()),
+    item.title.toLowerCase().includes(query.toLowerCase())
   );
 
   return (
     <div
       ref={containerRef}
-      className="relative hidden md:block w-48 xl:w-64 transition-all duration-300"
+      className="relative hidden md:block w-48 xl:w-56 rounded-none shadow-none"
     >
       <div
-        className={`flex items-center gap-2 bg-slate-100/90 border ${
+        className={`flex items-center gap-2 bg-white border ${
           isFocused
-            ? "border-blue-500 bg-white ring-4 ring-blue-500/10 shadow-sm w-72 -ml-8"
-            : "border-slate-200/90 hover:border-slate-300"
-        } rounded-xl px-3.5 py-2 transition-all duration-200`}
+            ? "border-slate-900 ring-1 ring-slate-900"
+            : "border-slate-300 hover:border-slate-400"
+        } rounded-none px-3 py-1.5 transition-all shadow-none`}
       >
-        <Search
-          className={`w-4 h-4 shrink-0 ${isFocused ? "text-blue-600" : "text-slate-400"}`}
-        />
+        <Search className="w-3.5 h-3.5 text-slate-500 shrink-0" />
 
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
-          placeholder="Search services..."
-          className="w-full bg-transparent text-xs text-slate-800 placeholder-slate-400 focus:outline-none font-medium"
+          placeholder="Search..."
+          className="w-full bg-transparent text-xs text-slate-800 placeholder-slate-400 focus:outline-none font-medium rounded-none"
         />
 
         {query ? (
           <button
             onClick={() => setQuery("")}
-            className="text-slate-400 hover:text-slate-600 p-0.5 rounded-full hover:bg-slate-200 transition-colors"
+            className="text-slate-400 hover:text-slate-600 p-0.5 rounded-none"
           >
             <X className="w-3.5 h-3.5" />
           </button>
         ) : (
-          <span className="text-[10px] font-semibold text-slate-400 bg-slate-200/70 border border-slate-300/60 px-1.5 py-0.5 rounded">
-            ⌘K
+          <span className="text-[10px] font-mono text-slate-400 bg-slate-100 border border-slate-200 px-1 py-0.5 rounded-none">
+            /
           </span>
         )}
       </div>
+
+      {/* Autocomplete Dropdown */}
+      {isFocused && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-slate-300 p-2 z-50 rounded-none shadow-none">
+          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 px-2 font-mono">
+            Navigation Matches
+          </div>
+          <div className="space-y-0.5 max-h-48 overflow-y-auto custom-scrollbar">
+            {filteredNav.map((item) => (
+              <Link
+                key={item.title}
+                href={item.href}
+                onClick={() => {
+                  setIsFocused(false);
+                  onSearchSelect?.();
+                }}
+                className="block px-2 py-1.5 text-xs font-semibold text-slate-800 hover:bg-slate-900 hover:text-white rounded-none transition-colors"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

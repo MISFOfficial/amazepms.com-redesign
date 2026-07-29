@@ -8,20 +8,23 @@ interface HamburgerButtonProps {
   onToggle: () => void;
 }
 
-export const HamburgerButton: React.FC<HamburgerButtonProps> = ({ isOpen, onToggle }) => {
+export const HamburgerButton: React.FC<HamburgerButtonProps> = ({
+  isOpen,
+  onToggle,
+}) => {
   return (
     <button
       onClick={onToggle}
       aria-label={isOpen ? "Close menu" : "Open menu"}
-      className="relative flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-600 border border-slate-200/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500/20 cursor-pointer shrink-0"
+      className="flex items-center gap-2 px-3 py-2 bg-slate-900 text-white hover:bg-slate-800 border border-slate-900 transition-colors focus:outline-none cursor-pointer rounded-none shadow-none"
     >
-      <span className="text-xs font-semibold uppercase tracking-wider hidden sm:inline-block">
+      <span className="text-xs font-mono uppercase tracking-wider hidden sm:inline-block">
         {isOpen ? "Close" : "Menu"}
       </span>
       {isOpen ? (
-        <X className="w-5 h-5 text-blue-600 transition-transform" />
+        <X className="w-4 h-4 text-white" />
       ) : (
-        <Menu className="w-5 h-5 text-slate-800 transition-transform" />
+        <Menu className="w-4 h-4 text-white" />
       )}
     </button>
   );
