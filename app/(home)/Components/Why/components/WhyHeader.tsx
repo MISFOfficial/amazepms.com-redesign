@@ -22,7 +22,9 @@ export const WhyHeader: React.FC = () => {
 
       {/* Subtitle */}
       <p className="text-[11px] sm:text-xs md:text-sm text-slate-600 leading-normal sm:leading-relaxed font-sans max-w-xl mx-auto">
-        Empowering 500+ commercial towers and gated communities across PAN India with 100% in-house staff, military-grade compliance, and cost-saving audits.
+        Empowering 500+ commercial towers and gated communities across PAN India
+        with 100% in-house staff, military-grade compliance, and cost-saving
+        audits.
       </p>
     </div>
   );
