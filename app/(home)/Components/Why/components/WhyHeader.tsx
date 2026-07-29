@@ -6,7 +6,7 @@ import { Sparkles } from "lucide-react";
 
 export const WhyHeader: React.FC = () => {
   return (
-    <div className="text-center max-w-3xl mx-auto space-y-4 mb-12 sm:mb-16">
+    <div className="text-center max-w-3xl mx-auto space-y-2 mb-0">
       {/* Top Tagline Badge */}
       <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 border border-blue-200/80 text-blue-700 text-xs font-semibold rounded-full shadow-xs">
         <Sparkles className="w-3.5 h-3.5 text-blue-600" />
