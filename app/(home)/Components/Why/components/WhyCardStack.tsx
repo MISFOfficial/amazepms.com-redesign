@@ -52,15 +52,15 @@ export const WhyCardStack: React.FC = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case "Building2":
-        return <Building2 className="w-6 h-6 sm:w-7 sm:h-7" />;
+        return <Building2 className="w-5 h-5 sm:w-7 sm:h-7" />;
       case "ShieldCheck":
-        return <ShieldCheck className="w-6 h-6 sm:w-7 sm:h-7" />;
+        return <ShieldCheck className="w-5 h-5 sm:w-7 sm:h-7" />;
       case "TrendingUp":
-        return <TrendingUp className="w-6 h-6 sm:w-7 sm:h-7" />;
+        return <TrendingUp className="w-5 h-5 sm:w-7 sm:h-7" />;
       case "Award":
-        return <Award className="w-6 h-6 sm:w-7 sm:h-7" />;
+        return <Award className="w-5 h-5 sm:w-7 sm:h-7" />;
       default:
-        return <Building2 className="w-6 h-6 sm:w-7 sm:h-7" />;
+        return <Building2 className="w-5 h-5 sm:w-7 sm:h-7" />;
     }
   };
 
@@ -70,13 +70,16 @@ export const WhyCardStack: React.FC = () => {
     // Register GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
+    const mm = gsap.matchMedia();
+
+    // GSAP ScrollTrigger timeline ONLY active on Large Desktop Devices (>= 1024px)
+    mm.add("(min-width: 1024px)", () => {
       const cards = gsap.utils.toArray<HTMLElement>(".why-card-wrapper");
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "center center", // Pin section right in the center of the viewport (Image 1 view)
+          start: "center center", // Pin centered in viewport on desktop
           end: `+=${(cards.length - 1) * 100}%`,
           pin: true,
           scrub: true,
@@ -89,7 +92,7 @@ export const WhyCardStack: React.FC = () => {
         if (index === 0) return;
         tl.fromTo(card, { yPercent: 100 }, { yPercent: 0, ease: "none" });
       });
-    }, sectionRef);
+    });
 
     // Refresh layout measurements after painting
     const timer = setTimeout(() => {
@@ -97,7 +100,7 @@ export const WhyCardStack: React.FC = () => {
     }, 250);
 
     return () => {
-      ctx.revert();
+      mm.revert();
       clearTimeout(timer);
     };
   }, []);
@@ -105,17 +108,17 @@ export const WhyCardStack: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="why-section-wrapper w-full bg-slate-50 min-h-screen flex flex-col justify-center py-10"
+      className="why-section-wrapper w-full bg-slate-50 min-h-screen flex flex-col justify-center py-8 lg:py-10"
     >
-      {/* Header Section - Always visible centered at top */}
-      <div className="pb-3 px-4">
+      {/* Header Section */}
+      <div className="pb-4 sm:pb-6 px-4">
         <WhyHeader />
       </div>
 
-      {/* Pinned GSAP Cards Container - Exactly 1 Card Visible at a time */}
-      <div className="why-cards-container relative w-full h-[450px] sm:h-[470px] overflow-hidden bg-slate-50 flex items-center justify-center">
+      {/* GSAP Cards Container - Column Stacked on Mobile (<1024px), Pinned Sliding on Desktop (>=1024px) */}
+      <div className="why-cards-container flex flex-col gap-6 lg:gap-0 lg:relative lg:w-full lg:h-[480px] lg:overflow-hidden lg:bg-slate-50 lg:items-center lg:justify-center px-4 max-w-4xl mx-auto lg:max-w-none">
         {/* Background Decorative Ambient Radial Glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
         {whyPillarsData.map((pillar, idx) => {
           const theme = cardThemes[idx % cardThemes.length];
@@ -123,26 +126,26 @@ export const WhyCardStack: React.FC = () => {
           return (
             <div
               key={pillar.id}
-              className="why-card-wrapper absolute inset-0 flex items-center justify-center px-4"
+              className="why-card-wrapper w-full lg:absolute lg:inset-0 lg:flex lg:items-center lg:justify-center lg:px-4"
               style={{ zIndex: idx + 1 }}
             >
               <div
-                className={`w-full max-w-4xl rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 lg:p-10 border ${theme.bg} shadow-2xl transition-all duration-300 relative overflow-hidden flex flex-col justify-between my-auto`}
+                className={`w-full max-w-4xl rounded-2xl sm:rounded-[32px] p-5 sm:p-8 lg:p-10 border ${theme.bg} shadow-xl lg:shadow-2xl transition-all duration-300 relative overflow-hidden flex flex-col justify-between my-auto`}
               >
                 {/* Card Top Header */}
                 <div>
-                  <div className="flex flex-wrap items-center justify-between gap-4 mb-4 sm:mb-6">
+                  <div className="flex flex-row items-center justify-between gap-3 sm:gap-4 mb-4 sm:mb-6">
                     {/* Badge & Icon */}
                     <div className="flex items-center gap-3 sm:gap-4">
                       <div
-                        className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shrink-0 border ${theme.badgeBg}`}
+                        className={`w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0 border ${theme.badgeBg}`}
                       >
                         {getIcon(pillar.iconName)}
                       </div>
                       <div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-1.5 sm:gap-2">
                           <span
-                            className={`text-[11px] sm:text-xs font-mono font-extrabold uppercase tracking-widest px-2.5 py-0.5 rounded-full border ${theme.badgeBg}`}
+                            className={`text-[10px] sm:text-xs font-mono font-extrabold uppercase tracking-wider sm:tracking-widest px-2.5 py-0.5 rounded-full border ${theme.badgeBg}`}
                           >
                             {theme.cardLabel}
                           </span>
@@ -150,22 +153,22 @@ export const WhyCardStack: React.FC = () => {
                             • {pillar.number}/04
                           </span>
                         </div>
-                        <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight mt-1">
+                        <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight mt-1 leading-snug">
                           {pillar.title}
                         </h3>
                       </div>
                     </div>
 
                     {/* Stat Badge */}
-                    <div className="flex items-center gap-2.5 sm:gap-3 px-4 py-2 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10">
+                    <div className="flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shrink-0">
                       <Layers className={`w-4 h-4 sm:w-5 sm:h-5 ${theme.accent}`} />
                       <div className="text-right">
                         <span
-                          className={`text-xl sm:text-2xl font-mono font-extrabold block leading-none ${theme.statColor}`}
+                          className={`text-lg sm:text-2xl font-mono font-extrabold block leading-none ${theme.statColor}`}
                         >
                           {pillar.stat}
                         </span>
-                        <span className="text-[10px] font-semibold uppercase tracking-wider block mt-0.5 opacity-80">
+                        <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider block mt-0.5 opacity-80">
                           {pillar.statLabel}
                         </span>
                       </div>
@@ -174,11 +177,11 @@ export const WhyCardStack: React.FC = () => {
                 </div>
 
                 {/* 100% Verbatim Screenshot Bullet Points */}
-                <div className="grid grid-cols-1 gap-3 pt-4 border-t border-white/10">
+                <div className="grid grid-cols-1 gap-2.5 sm:gap-3 pt-3.5 sm:pt-4 border-t border-white/10">
                   {pillar.points.map((pt, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-3 p-3 sm:p-3.5 rounded-2xl bg-white/5 backdrop-blur-xs border border-white/10 hover:bg-white/10 transition-colors"
+                      className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 backdrop-blur-xs border border-white/10 hover:bg-white/10 transition-colors"
                     >
                       <CheckCircle2
                         className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 mt-0.5 ${theme.accent}`}
