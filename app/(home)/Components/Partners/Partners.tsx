@@ -17,10 +17,6 @@ export function Partners() {
 
       {/* Infinite Marquee Container */}
       <div className="relative py-2 bg-slate-50/50 border-y border-slate-100">
-        {/* Left & Right Subtle Fade Overlays */}
-        <div className="absolute top-0 left-0 bottom-0 w-24 bg-linear-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 right-0 bottom-0 w-24 bg-linear-to-l from-white to-transparent z-10 pointer-events-none" />
-
         <Marquee
           speed={45}
           pauseOnHover={true}
