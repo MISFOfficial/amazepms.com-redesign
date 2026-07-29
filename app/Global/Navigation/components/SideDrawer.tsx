@@ -15,9 +15,9 @@ import {
   ShieldCheck,
   Building2,
   ArrowRight,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
-import { Nav, NavItem, EmergencyContact, ServiceCategories } from "../Nav";
+import { Nav, NavItem, EmergencyContact } from "../Nav";
 
 interface SideDrawerProps {
   isOpen: boolean;
@@ -29,9 +29,11 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
   const [drawerSearch, setDrawerSearch] = useState("");
   const [expandedNav, setExpandedNav] = useState<string | null>("Services");
 
-  const filteredNav = Nav.filter((item) =>
-    item.title.toLowerCase().includes(drawerSearch.toLowerCase()) ||
-    (item.description && item.description.toLowerCase().includes(drawerSearch.toLowerCase()))
+  const filteredNav = Nav.filter(
+    (item) =>
+      item.title.toLowerCase().includes(drawerSearch.toLowerCase()) ||
+      (item.description &&
+        item.description.toLowerCase().includes(drawerSearch.toLowerCase())),
   );
 
   const toggleExpand = (title: string) => {
@@ -67,8 +69,12 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                   <Building2 className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-extrabold text-slate-900 text-base leading-tight">AMAZE PMSPL</h3>
-                  <p className="text-[11px] text-slate-500 font-medium">Property Management Service Center</p>
+                  <h3 className="font-extrabold text-slate-900 text-base leading-tight">
+                    AMAZE PMSPL
+                  </h3>
+                  <p className="text-[11px] text-slate-500 font-medium">
+                    Property Management Service Center
+                  </p>
                 </div>
               </div>
 
@@ -108,12 +114,18 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
 
                 <div className="space-y-1">
                   {filteredNav.map((item: NavItem) => {
-                    const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
-                    const hasSubItems = item.subItems && item.subItems.length > 0;
+                    const isActive =
+                      pathname === item.href ||
+                      (item.href !== "/" && pathname.startsWith(item.href));
+                    const hasSubItems =
+                      item.subItems && item.subItems.length > 0;
                     const isExpanded = expandedNav === item.title;
 
                     return (
-                      <div key={item.title} className="rounded-xl overflow-hidden">
+                      <div
+                        key={item.title}
+                        className="rounded-xl overflow-hidden"
+                      >
                         <div
                           className={`flex items-center justify-between px-3.5 py-3 rounded-xl transition-all ${
                             isActive
@@ -126,12 +138,16 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                             onClick={onClose}
                             className="flex-1 flex items-center justify-between mr-2"
                           >
-                            <span className="text-sm font-medium">{item.title}</span>
+                            <span className="text-sm font-medium">
+                              {item.title}
+                            </span>
 
                             {item.badge && (
                               <span
                                 className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                                  isActive ? "bg-white/20 text-white" : "bg-amber-100 text-amber-800 border border-amber-200"
+                                  isActive
+                                    ? "bg-white/20 text-white"
+                                    : "bg-amber-100 text-amber-800 border border-amber-200"
                                 }`}
                               >
                                 {item.badge}
@@ -143,7 +159,9 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                             <button
                               onClick={() => toggleExpand(item.title)}
                               className={`p-1 rounded-md transition-all ${
-                                isActive ? "text-white/80 hover:bg-white/20" : "text-slate-400 hover:bg-slate-200"
+                                isActive
+                                  ? "text-white/80 hover:bg-white/20"
+                                  : "text-slate-400 hover:bg-slate-200"
                               }`}
                             >
                               <ChevronDown
@@ -183,27 +201,6 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
               </div>
 
               {/* Property Services Hub */}
-              <div className="pt-2 border-t border-slate-100">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-2.5">
-                  Property Services Quick Hub
-                </span>
-
-                <div className="grid grid-cols-2 gap-2">
-                  {ServiceCategories.slice(0, 4).map((cat) => (
-                    <Link
-                      key={cat.id}
-                      href={`/services#${cat.id}`}
-                      onClick={onClose}
-                      className="p-2.5 rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200/70 transition-all text-left group"
-                    >
-                      <span className="text-xs font-semibold text-slate-800 group-hover:text-blue-600 block truncate">
-                        {cat.name}
-                      </span>
-                      <span className="text-[10px] text-slate-500 block mt-0.5">{cat.count}</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
 
               {/* Support Card */}
               <div className="p-4 rounded-2xl bg-slate-900 text-white shadow-lg space-y-2.5">
@@ -235,7 +232,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                 <Sparkles className="w-4 h-4" />
                 <span>Get Service Consultation</span>
               </Link>
-              
+
               <a
                 href={`tel:${EmergencyContact.phone}`}
                 className="w-full py-2 px-4 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 rounded-xl text-xs font-semibold text-center transition-all flex items-center justify-center gap-2"
