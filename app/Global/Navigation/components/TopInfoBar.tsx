@@ -17,8 +17,8 @@ export const TopInfoBar: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-1.5 ">
-            <Clock className="w-3.5 h-3.5 text-(--white)" />
-            <span>Mon - Sat: 8:00 AM - 8:00 PM</span>
+            <Clock className="w-3.5 h-3.5 text-(--secondary)" />
+            <span className="text-(--white)">Mon - Sat: 8:00 AM - 8:00 PM</span>
           </div>
         </div>
 
@@ -26,10 +26,12 @@ export const TopInfoBar: React.FC = () => {
         <div className="flex items-center gap-6">
           <a
             href={`tel:${EmergencyContact.phone}`}
-            className="flex items-center gap-1.5 hover:text-(--white) transition-colors font-medium text-slate-200"
+            className="flex items-center gap-1.5 hover:text-(--white) transition-colors font-medium text-(--white)"
           >
             <Phone className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Hotline: {EmergencyContact.displayPhone}</span>
+            <span className="text-(--white)">
+              Hotline: {EmergencyContact.displayPhone}
+            </span>
           </a>
 
           <a
@@ -37,7 +39,7 @@ export const TopInfoBar: React.FC = () => {
             className="flex items-center gap-1.5 hover:text-(--white) transition-colors "
           >
             <Mail className="w-3.5 h-3.5 text-(--white)" />
-            <span>{EmergencyContact.email}</span>
+            <span className="text-(--white)">{EmergencyContact.email}</span>
           </a>
         </div>
       </div>
