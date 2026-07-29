@@ -8,12 +8,12 @@ export const Logo: React.FC = () => {
   return (
     <Link
       href="/"
-      className="flex items-center gap-3 group focus:outline-none p-1 transition-all shrink-0 rounded-none shadow-none"
+      className="flex items-center gap-3 group focus:outline-none p-1 transition-all shrink-0 primary-rounded shadow-none"
     >
       {/* Sharp Brand Icon Emblem */}
-      <div className="relative flex items-center justify-center w-10 h-10 bg-slate-900 text-white rounded-none shadow-none border border-slate-800">
+      <div className="relative flex items-center justify-center w-10 h-10 bg-(--black) text-(--white) primary-rounded shadow-none border border-slate-800">
         <Building2 className="w-5 h-5 text-blue-400" />
-        <div className="absolute -top-1 -right-1 bg-amber-500 p-0.5 border border-white rounded-none">
+        <div className="absolute -top-1 -right-1 bg-amber-500 p-0.5 border border-white primary-rounded">
           <ShieldCheck className="w-2.5 h-2.5 text-slate-950" />
         </div>
       </div>
@@ -24,7 +24,7 @@ export const Logo: React.FC = () => {
           <span className="font-black text-xl tracking-tight text-slate-900 font-sans group-hover:text-blue-600 transition-colors">
             AMAZE
           </span>
-          <span className="bg-blue-600 text-white text-[10px] font-extrabold px-1.5 py-0.5 tracking-wider uppercase rounded-none">
+          <span className="bg-blue-600 text-(--white) text-[10px] font-extrabold px-1.5 py-0.5 tracking-wider uppercase primary-rounded">
             PMSPL
           </span>
         </div>

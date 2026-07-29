@@ -28,20 +28,20 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
   }, []);
 
   const filteredNav = Nav.filter((item) =>
-    item.title.toLowerCase().includes(query.toLowerCase())
+    item.title.toLowerCase().includes(query.toLowerCase()),
   );
 
   return (
     <div
       ref={containerRef}
-      className="relative hidden md:block w-48 xl:w-56 rounded-none shadow-none"
+      className="relative hidden md:block w-48 xl:w-56 primary-rounded shadow-none"
     >
       <div
-        className={`flex items-center gap-2 bg-white border ${
+        className={`flex items-center gap-2 bg-(--white) border ${
           isFocused
             ? "border-slate-900 ring-1 ring-slate-900"
             : "border-slate-300 hover:border-slate-400"
-        } rounded-none px-3 py-1.5 transition-all shadow-none`}
+        } primary-rounded px-3 py-1.5 transition-all shadow-none`}
       >
         <Search className="w-3.5 h-3.5 text-slate-500 shrink-0" />
 
@@ -51,18 +51,18 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder="Search..."
-          className="w-full bg-transparent text-xs text-slate-800 placeholder-slate-400 focus:outline-none font-medium rounded-none"
+          className="w-full bg-transparent text-xs text-(--black) placeholder-slate-400 focus:outline-none font-medium primary-rounded"
         />
 
         {query ? (
           <button
             onClick={() => setQuery("")}
-            className="text-slate-400 hover:text-slate-600 p-0.5 rounded-none"
+            className="text-slate-400 hover:text-slate-600 p-0.5 primary-rounded"
           >
             <X className="w-3.5 h-3.5" />
           </button>
         ) : (
-          <span className="text-[10px] font-mono text-slate-400 bg-slate-100 border border-slate-200 px-1 py-0.5 rounded-none">
+          <span className="text-[10px] font-mono text-slate-400 bg-slate-100 border border-slate-200 px-1 py-0.5 primary-rounded">
             /
           </span>
         )}
@@ -70,7 +70,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
 
       {/* Autocomplete Dropdown */}
       {isFocused && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-slate-300 p-2 z-50 rounded-none shadow-none">
+        <div className="absolute top-full left-0 right-0 mt-1 bg-(--white) border border-slate-300 p-2 z-50 primary-rounded shadow-none">
           <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 px-2 font-mono">
             Navigation Matches
           </div>
@@ -83,7 +83,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
                   setIsFocused(false);
                   onSearchSelect?.();
                 }}
-                className="block px-2 py-1.5 text-xs font-semibold text-slate-800 hover:bg-slate-900 hover:text-white rounded-none transition-colors"
+                className="block px-2 py-1.5 text-xs font-semibold text-(--black) hover:bg-(--black) hover:text-(--white) primary-rounded transition-colors"
               >
                 {item.title}
               </Link>

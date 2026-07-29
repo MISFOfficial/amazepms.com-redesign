@@ -6,12 +6,12 @@ import { EmergencyContact } from "../Nav";
 
 export const TopInfoBar: React.FC = () => {
   return (
-    <div className="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 hidden lg:block rounded-none shadow-none">
+    <div className="bg-(--black) text-slate-300 text-xs py-2 px-4 border-b border-slate-800 hidden lg:block primary-rounded shadow-none">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Left Side */}
         <div className="flex items-center gap-6">
           <div className="flex items-center gap-2">
-            <span className="h-2 w-2 bg-emerald-500 rounded-none"></span>
+            <span className="h-2 w-2 bg-emerald-500 primary-rounded"></span>
             <span className="text-emerald-400 font-semibold tracking-wide">
               24/7 Emergency Service Center
             </span>
