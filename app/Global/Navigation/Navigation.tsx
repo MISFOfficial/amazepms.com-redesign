@@ -34,10 +34,10 @@ export function Navigation() {
             {/* Flat Action Pill/Box Button */}
             <Link
               href="/contact"
-              className="hidden xl:flex items-center gap-1 bg-(--black) hover:bg-slate-800 text-(--white) text-xs font-bold uppercase tracking-wider px-3.5 py-2 transition-colors primary-rounded shadow-none border border-slate-900"
+              className="hidden xl:flex items-center gap-1 text-(--secondary) border border-(--secondary) hover:bg-(--secondary) hover:text-(--white) text-xs font-bold uppercase tracking-wider px-3.5 py-2 transition-colors primary-rounded shadow-none"
             >
               <span>Get Quote</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-blue-400" />
+              <ArrowUpRight className="w-3.5 h-3.5 " />
             </Link>
 
             {/* Square Hamburger Menu Button */}
