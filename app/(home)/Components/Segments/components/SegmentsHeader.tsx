@@ -24,7 +24,8 @@ export const SegmentsHeader: React.FC = () => {
 
       {/* Narrative Subtitle */}
       <p className="text-xs sm:text-sm md:text-base text-slate-300 font-sans max-w-xl mx-auto leading-relaxed">
-        An interconnected operational network providing tailored facility management and compliance across 12 strategic sectors.
+        An interconnected operational network providing tailored facility
+        management and compliance across 12 strategic sectors.
       </p>
     </div>
   );
