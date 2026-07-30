@@ -13,11 +13,11 @@ export function ContactDetails() {
         {/* Main Grid: Left Services & Right Office Info */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Contact For Our Services */}
-          <div className="lg:col-span-6 bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 flex flex-col justify-between">
+          <div className="lg:col-span-6 bg-[var(--white)] primary-rounded p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 flex flex-col justify-between">
             <div className="space-y-6">
               {/* Logo & Title Header */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pb-4 border-b border-[var(--primary)]/15">
-                <div className="relative w-36 h-14 bg-[var(--white)] p-2 rounded-xl shrink-0  border border-[var(--primary)]/10">
+                <div className="relative w-36 h-14 bg-[var(--white)] p-2 primary-rounded shrink-0  border border-[var(--primary)]/10">
                   <Image
                     src="/logo.png"
                     alt="Amaze PMS Logo"
@@ -42,7 +42,7 @@ export function ContactDetails() {
                   {contactInfoData.servicesColumn1.map((service, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors"
+                      className="flex items-center gap-2.5 p-2.5 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors"
                     >
                       <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
                       <span className="text-xs sm:text-sm font-semibold text-[var(--black)]/80">
@@ -57,7 +57,7 @@ export function ContactDetails() {
                   {contactInfoData.servicesColumn2.map((service, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors"
+                      className="flex items-center gap-2.5 p-2.5 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors"
                     >
                       <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
                       <span className="text-xs sm:text-sm font-semibold text-[var(--black)]/80">
@@ -77,7 +77,7 @@ export function ContactDetails() {
           </div>
 
           {/* Right Column: Office Address & Stay Connected */}
-          <div className="lg:col-span-6 bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 flex flex-col justify-between">
+          <div className="lg:col-span-6 bg-[var(--white)] primary-rounded p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 flex flex-col justify-between">
             <div className="space-y-6">
               {/* Header */}
               <div>
@@ -91,7 +91,7 @@ export function ContactDetails() {
 
               {/* Address Box */}
               <div className="space-y-4 pt-2">
-                <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15">
+                <div className="flex items-start gap-3.5 p-4 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15">
                   <MapPin className="w-5 h-5 text-[var(--secondary)] shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs font-mono text-[var(--primary)] font-bold uppercase block mb-0.5">
@@ -104,7 +104,7 @@ export function ContactDetails() {
                 </div>
 
                 {/* Phone Contact */}
-                <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors">
+                <div className="flex items-center gap-3.5 p-4 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors">
                   <Phone className="w-5 h-5 text-[var(--secondary)] shrink-0" />
                   <div>
                     <span className="text-xs font-mono text-[var(--primary)] font-bold uppercase block">
@@ -120,7 +120,7 @@ export function ContactDetails() {
                 </div>
 
                 {/* Email Contact */}
-                <div className="flex items-center gap-3.5 p-4 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors">
+                <div className="flex items-center gap-3.5 p-4 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors">
                   <Mail className="w-5 h-5 text-[var(--secondary)] shrink-0" />
                   <div>
                     <span className="text-xs font-mono text-[var(--primary)] font-bold uppercase block">
@@ -144,7 +144,7 @@ export function ContactDetails() {
               </span>
               <a
                 href={`tel:${contactInfoData.phone}`}
-                className="px-4 py-2 rounded-xl bg-[var(--primary)] text-[var(--white)] font-bold text-xs hover:bg-[var(--secondary)] transition-colors "
+                className="px-4 py-2 primary-rounded bg-[var(--primary)] text-[var(--white)] font-bold text-xs hover:bg-[var(--secondary)] transition-colors "
               >
                 Call Now
               </a>

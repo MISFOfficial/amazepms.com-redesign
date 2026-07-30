@@ -9,7 +9,7 @@
 }
 
 .primary-rounded {
-  @apply rounded-md;
+  @apply rounded-2xl;
 }
 
 .ratio {

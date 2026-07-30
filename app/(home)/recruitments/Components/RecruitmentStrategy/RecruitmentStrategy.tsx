@@ -23,7 +23,7 @@ export function RecruitmentStrategy() {
         </div>
 
         {/* Card Body Container */}
-        <div className="max-w-4xl mx-auto bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20  space-y-8">
+        <div className="max-w-4xl mx-auto bg-[var(--white)] primary-rounded p-6 sm:p-10 border border-[var(--primary)]/20  space-y-8">
           {/* Man Power Sourcing Subhead */}
           <div className="space-y-4">
             <h3 className="text-xl sm:text-2xl font-bold text-[var(--primary)] tracking-tight text-center sm:text-left flex items-center gap-2 justify-center sm:justify-start">
@@ -38,7 +38,7 @@ export function RecruitmentStrategy() {
                 {recruitmentStrategyData.column1.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 p-3 rounded-xl bg-[var(--primary)]/5 border border-[var(--primary)]/15"
+                    className="flex items-center gap-3 p-3 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15"
                   >
                     <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
                     <span className="text-xs sm:text-sm font-medium text-[var(--black)]/80">
@@ -53,7 +53,7 @@ export function RecruitmentStrategy() {
                 {recruitmentStrategyData.column2.map((item, idx) => (
                   <div
                     key={idx}
-                    className="flex items-center gap-3 p-3 rounded-xl bg-[var(--primary)]/5 border border-[var(--primary)]/15"
+                    className="flex items-center gap-3 p-3 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15"
                   >
                     <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
                     <span className="text-xs sm:text-sm font-medium text-[var(--black)]/80">
@@ -72,7 +72,7 @@ export function RecruitmentStrategy() {
               <span>{recruitmentStrategyData.subhead2}</span>
             </h4>
 
-            <div className="p-4 sm:p-5 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/20 text-xs sm:text-sm text-[var(--black)]/80 leading-relaxed font-sans font-normal">
+            <div className="p-4 sm:p-5 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/20 text-xs sm:text-sm text-[var(--black)]/80 leading-relaxed font-sans font-normal">
               {recruitmentStrategyData.backgroundVerificationText}
             </div>
           </div>

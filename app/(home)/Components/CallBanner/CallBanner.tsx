@@ -10,7 +10,7 @@ export function CallBanner() {
     <section className="py-8 sm:py-12 bg-[var(--white)] border-b border-[var(--primary)]/10">
       <div className="ratio">
         {/* Main Navy Banner Box */}
-        <div className="relative w-full rounded-2xl sm:rounded-3xl bg-[var(--primary)] p-6 sm:p-8 lg:px-12 lg:py-8 overflow-hidden  flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 text-[var(--white)]">
+        <div className="relative w-full primary-rounded sm:primary-rounded bg-[var(--primary)] p-6 sm:p-8 lg:px-12 lg:py-8 overflow-hidden  flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 text-[var(--white)]">
           {/* Background Left Accent Overlay */}
           <div className="absolute -left-10 -top-10 w-48 h-48 rounded-full bg-[var(--secondary)]/20 blur-xl pointer-events-none" />
 

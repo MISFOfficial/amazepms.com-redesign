@@ -68,7 +68,7 @@ export const SegmentStationCard: React.FC<SegmentStationCardProps> = ({
       }`}
     >
       {/* Card Body Container */}
-      <div className="relative bg-[var(--white)] rounded-2xl p-5 sm:p-6 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden group text-[var(--black)]">
+      <div className="relative bg-[var(--white)] primary-rounded p-5 sm:p-6 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden group text-[var(--black)]">
         {/* Card Header & Station Badge */}
         <div
           className={`flex items-center gap-3 mb-3 ${
@@ -91,7 +91,7 @@ export const SegmentStationCard: React.FC<SegmentStationCardProps> = ({
             isEven ? "lg:flex-row-reverse" : "lg:flex-row"
           }`}
         >
-          <div className="w-10 h-10 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-all duration-300">
+          <div className="w-10 h-10 primary-rounded bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-all duration-300">
             {getIcon(station.iconName)}
           </div>
 

@@ -17,7 +17,7 @@ export const GalleryItemCard: React.FC<GalleryItemCardProps> = ({
   return (
     <div
       onClick={onClick}
-      className="gallery-item-card group cursor-pointer relative bg-[var(--white)] rounded-2xl border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden flex flex-col h-full text-[var(--black)]"
+      className="gallery-item-card group cursor-pointer relative bg-[var(--white)] primary-rounded border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden flex flex-col h-full text-[var(--black)]"
     >
       {/* Image Container */}
       <div className="relative w-full h-72 sm:h-80 overflow-hidden bg-[var(--white)]">

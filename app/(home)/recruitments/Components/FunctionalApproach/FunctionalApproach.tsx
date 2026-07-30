@@ -68,7 +68,7 @@ export function FunctionalApproach() {
           </div>
 
           {/* Right: Skyscraper Graphic Image */}
-          <div className="lg:col-span-4 relative h-[450px] sm:h-[550px] rounded-3xl overflow-hidden border border-[var(--primary)]/20  group">
+          <div className="lg:col-span-4 relative h-[450px] sm:h-[550px] primary-rounded overflow-hidden border border-[var(--primary)]/20  group">
             <Image
               src="/hero_building.png"
               alt="High-Rise Skyscraper Architecture"

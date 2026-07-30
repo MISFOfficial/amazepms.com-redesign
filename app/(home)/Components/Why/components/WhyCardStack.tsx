@@ -121,9 +121,6 @@ export const WhyCardStack: React.FC = () => {
 
       {/* GSAP Cards Container */}
       <div className="why-cards-container flex flex-col gap-6 lg:gap-0 lg:relative lg:w-full lg:h-[480px] lg:overflow-hidden lg:bg-[var(--white)] lg:items-center lg:justify-center px-4 max-w-4xl mx-auto lg:max-w-none">
-        {/* Background Decorative Radial Glow */}
-        <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--primary)]/10 rounded-full blur-3xl pointer-events-none" />
-
         {whyPillarsData.map((pillar, idx) => {
           const theme = cardThemes[idx % cardThemes.length];
 
@@ -134,7 +131,7 @@ export const WhyCardStack: React.FC = () => {
               style={{ zIndex: idx + 1 }}
             >
               <div
-                className={`w-full max-w-4xl rounded-2xl sm:rounded-[32px] p-5 sm:p-8 lg:p-10 ${theme.bg}  lg: transition-all duration-300 relative overflow-hidden flex flex-col justify-between my-auto`}
+                className={`w-full max-w-4xl primary-rounded  p-5 sm:p-8 lg:p-10 ${theme.bg}  lg: transition-all duration-300 relative overflow-hidden flex flex-col justify-between my-auto`}
               >
                 {/* Card Top Header */}
                 <div>
@@ -142,7 +139,7 @@ export const WhyCardStack: React.FC = () => {
                     {/* Badge & Icon */}
                     <div className="flex items-center gap-3 sm:gap-4">
                       <div
-                        className={`w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center shrink-0 border ${theme.badgeBg}`}
+                        className={`w-11 h-11 sm:w-14 sm:h-14 primary-rounded sm:primary-rounded flex items-center justify-center shrink-0 border ${theme.badgeBg}`}
                       >
                         {getIcon(pillar.iconName)}
                       </div>
@@ -164,7 +161,7 @@ export const WhyCardStack: React.FC = () => {
                     </div>
 
                     {/* Stat Badge */}
-                    <div className="flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 shrink-0">
+                    <div className="flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 primary-rounded sm:primary-rounded bg-black/20 backdrop-blur-md border border-white/10 shrink-0">
                       <Layers
                         className={`w-4 h-4 sm:w-5 sm:h-5 ${theme.accent}`}
                       />
@@ -187,7 +184,7 @@ export const WhyCardStack: React.FC = () => {
                   {pillar.points.map((pt, i) => (
                     <div
                       key={i}
-                      className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 backdrop-blur-xs border border-white/10 hover:bg-white/10 transition-colors"
+                      className="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 primary-rounded sm:primary-rounded bg-white/5 backdrop-blur-xs border border-white/10 hover:bg-white/10 transition-colors"
                     >
                       <CheckCircle2
                         className={`w-4 h-4 sm:w-5 sm:h-5 shrink-0 mt-0.5 ${theme.accent}`}

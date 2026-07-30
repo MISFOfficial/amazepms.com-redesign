@@ -14,7 +14,7 @@ export function ClientLogos() {
         {/* 5 Key Logos Showcase Grid */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 items-center justify-center max-w-5xl mx-auto">
           {/* Logo 1: L&T Technology Services */}
-          <div className="p-4 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
+          <div className="p-4 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
             <span className="text-xs font-black tracking-widest text-[var(--primary)] font-mono">
               L&T
             </span>
@@ -24,15 +24,17 @@ export function ClientLogos() {
           </div>
 
           {/* Logo 2: Hill Country */}
-          <div className="p-4 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
+          <div className="p-4 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
             <span className="text-sm font-serif font-bold text-[var(--primary)] tracking-wider">
               Hill Country
             </span>
-            <span className="text-[9px] text-[var(--black)]/60">Residences</span>
+            <span className="text-[9px] text-[var(--black)]/60">
+              Residences
+            </span>
           </div>
 
           {/* Logo 3: Sri Sai Ram Towers */}
-          <div className="p-4 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
+          <div className="p-4 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
             <Building2 className="w-5 h-5 text-[var(--secondary)] mb-1" />
             <span className="text-xs font-bold text-[var(--primary)] tracking-tight">
               Sri Sai Ram Towers
@@ -40,7 +42,7 @@ export function ClientLogos() {
           </div>
 
           {/* Logo 4: Lodha */}
-          <div className="p-4 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
+          <div className="p-4 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
             <span className="text-sm font-extrabold text-[var(--primary)] font-sans uppercase tracking-widest">
               LODHA
             </span>
@@ -50,11 +52,13 @@ export function ClientLogos() {
           </div>
 
           {/* Logo 5: Oliva Clinics */}
-          <div className="p-4 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
+          <div className="p-4 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 flex flex-col items-center justify-center h-24 hover:border-[var(--secondary)] transition-colors">
             <span className="text-sm font-bold text-[var(--primary)] tracking-wide">
               OLIVA
             </span>
-            <span className="text-[8px] text-[var(--black)]/60">Skin & Hair Clinic</span>
+            <span className="text-[8px] text-[var(--black)]/60">
+              Skin & Hair Clinic
+            </span>
           </div>
         </div>
       </div>
@@ -63,4 +67,3 @@ export function ClientLogos() {
 }
 
 export default ClientLogos;
-

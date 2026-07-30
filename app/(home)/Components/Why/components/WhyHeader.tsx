@@ -6,12 +6,6 @@ import { Sparkles } from "lucide-react";
 export const WhyHeader: React.FC = () => {
   return (
     <div className="text-center max-w-3xl mx-auto space-y-1.5 sm:space-y-2 mb-0 px-2">
-      {/* Top Tagline Badge */}
-      <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-[10px] sm:text-xs font-semibold rounded-full ">
-        <Sparkles className="w-3 h-3 text-[var(--secondary)] shrink-0" />
-        <span>OUR SERVICE BENEFITS & ADVANTAGES</span>
-      </div>
-
       {/* Main Title */}
       <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
         Why Choose <span className="text-[var(--secondary)]">Amaze PMS</span>

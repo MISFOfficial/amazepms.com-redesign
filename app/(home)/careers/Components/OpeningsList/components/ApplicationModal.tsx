@@ -30,7 +30,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--black)]/80 backdrop-blur-md p-4 transition-all">
-      <div className="relative w-full max-w-lg bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  text-[var(--black)]">
+      <div className="relative w-full max-w-lg bg-[var(--white)] primary-rounded p-6 sm:p-8 border border-[var(--primary)]/20  text-[var(--black)]">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -75,7 +75,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                   onChange={(e) =>
                     setFormData({ ...formData, fullName: e.target.value })
                   }
-                  className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+                  className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
                 />
               </div>
 
@@ -92,7 +92,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+                    className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
                   />
                 </div>
 
@@ -108,7 +108,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+                    className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
                   />
                 </div>
               </div>
@@ -124,7 +124,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
                   onChange={(e) =>
                     setFormData({ ...formData, experience: e.target.value })
                   }
-                  className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+                  className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
                 />
               </div>
 
@@ -132,7 +132,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <button
                   type="submit"
-                  className="flex-1 py-3 px-6 rounded-xl bg-[var(--primary)] text-[var(--white)] font-bold text-xs sm:text-sm hover:bg-[var(--secondary)] transition-colors flex items-center justify-center gap-2 "
+                  className="flex-1 py-3 px-6 primary-rounded bg-[var(--primary)] text-[var(--white)] font-bold text-xs sm:text-sm hover:bg-[var(--secondary)] transition-colors flex items-center justify-center gap-2 "
                 >
                   <Send className="w-4 h-4" />
                   <span>Submit Application</span>
@@ -140,7 +140,7 @@ export const ApplicationModal: React.FC<ApplicationModalProps> = ({
 
                 <a
                   href={`mailto:careers@amazepms.com?subject=Application for ${job.title}`}
-                  className="py-3 px-4 rounded-xl bg-[var(--primary)]/10 text-[var(--primary)] font-semibold text-xs sm:text-sm hover:bg-[var(--primary)] hover:text-[var(--white)] transition-colors flex items-center justify-center gap-2 border border-[var(--primary)]/20"
+                  className="py-3 px-4 primary-rounded bg-[var(--primary)]/10 text-[var(--primary)] font-semibold text-xs sm:text-sm hover:bg-[var(--primary)] hover:text-[var(--white)] transition-colors flex items-center justify-center gap-2 border border-[var(--primary)]/20"
                 >
                   <Mail className="w-4 h-4 text-[var(--secondary)]" />
                   <span>Send via Email</span>

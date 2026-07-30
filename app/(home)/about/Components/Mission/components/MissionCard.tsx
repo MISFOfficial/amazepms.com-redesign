@@ -21,7 +21,7 @@ export const MissionCard: React.FC<MissionCardProps> = ({ item }) => {
   };
 
   return (
-    <div className="w-full bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-[var(--primary)]/20  hover: transition-all duration-500 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
+    <div className="w-full bg-[var(--white)] primary-rounded sm:primary-rounded p-6 sm:p-8 lg:p-10 border border-[var(--primary)]/20  hover: transition-all duration-500 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
       {/* Left Side Content */}
       <div className="space-y-4 max-w-2xl text-left">
         <div className="flex items-center gap-3">
@@ -40,7 +40,7 @@ export const MissionCard: React.FC<MissionCardProps> = ({ item }) => {
       </div>
 
       {/* Right Side Visual Emblem */}
-      <div className="relative shrink-0 w-36 h-36 sm:w-44 sm:h-44 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/20 flex items-center justify-center p-4 shadow-inner group">
+      <div className="relative shrink-0 w-36 h-36 sm:w-44 sm:h-44 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/20 flex items-center justify-center p-4 shadow-inner group">
         {/* Brush Circle Accent Background */}
         <div className="absolute inset-3 rounded-full border-4 border-dashed border-[var(--secondary)]/40 group-hover:rotate-45 transition-transform duration-700" />
 

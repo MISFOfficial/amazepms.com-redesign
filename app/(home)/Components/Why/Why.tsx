@@ -13,4 +13,3 @@ export function Why() {
 }
 
 export default Why;
-

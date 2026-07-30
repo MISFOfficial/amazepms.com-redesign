@@ -9,7 +9,7 @@ export const FooterCTA: React.FC = () => {
     <div className="border-b border-slate-800/90 py-10 bg-slate-900/60">
       <div className="ratio flex flex-col lg:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-lg bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+          <div className="w-12 h-12 primary-rounded bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
             <Building2 className="w-6 h-6" />
           </div>
           <div>

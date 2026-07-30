@@ -55,12 +55,12 @@ export const StrengthCard: React.FC<StrengthCardProps> = ({ item }) => {
   };
 
   return (
-    <div className="strength-card group relative bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 flex flex-col justify-between h-full overflow-hidden text-[var(--black)]">
+    <div className="strength-card group relative bg-[var(--white)] primary-rounded sm:primary-rounded p-6 sm:p-8 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 flex flex-col justify-between h-full overflow-hidden text-[var(--black)]">
       <div>
         {/* Card Header */}
         <div className="flex items-center justify-between gap-3 mb-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
+            <div className="w-10 h-10 primary-rounded bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
               {getIcon()}
             </div>
             <span className="text-[10px] font-mono font-bold text-[var(--primary)] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/20">

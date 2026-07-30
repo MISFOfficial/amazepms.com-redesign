@@ -19,9 +19,9 @@ export const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 text-[var(--black)]">
+    <div className="bg-[var(--white)] primary-rounded p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 text-[var(--black)]">
       <div className="flex items-center gap-3 pb-4 border-b border-[var(--primary)]/15">
-        <div className="w-10 h-10 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0">
+        <div className="w-10 h-10 primary-rounded bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0">
           <MessageSquare className="w-5 h-5 text-[var(--secondary)]" />
         </div>
         <div>
@@ -48,7 +48,7 @@ export const ContactForm: React.FC = () => {
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+              className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
             />
           </div>
 
@@ -65,7 +65,7 @@ export const ContactForm: React.FC = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+                className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
               />
             </div>
 
@@ -81,7 +81,7 @@ export const ContactForm: React.FC = () => {
                 onChange={(e) =>
                   setFormData({ ...formData, phone: e.target.value })
                 }
-                className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+                className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
               />
             </div>
           </div>
@@ -95,7 +95,7 @@ export const ContactForm: React.FC = () => {
               onChange={(e) =>
                 setFormData({ ...formData, service: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+              className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
             >
               <option>PMS Services</option>
               <option>MEP Services</option>
@@ -123,13 +123,13 @@ export const ContactForm: React.FC = () => {
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-              className="w-full px-4 py-3 rounded-xl bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
+              className="w-full px-4 py-3 primary-rounded bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
             />
           </div>
 
           <button
             type="submit"
-            className="w-full py-3.5 px-6 rounded-xl bg-[var(--primary)] text-[var(--white)] font-bold text-xs sm:text-sm hover:bg-[var(--secondary)] transition-colors flex items-center justify-center gap-2 "
+            className="w-full py-3.5 px-6 primary-rounded bg-[var(--primary)] text-[var(--white)] font-bold text-xs sm:text-sm hover:bg-[var(--secondary)] transition-colors flex items-center justify-center gap-2 "
           >
             <Send className="w-4 h-4" />
             <span>Submit Inquiry</span>

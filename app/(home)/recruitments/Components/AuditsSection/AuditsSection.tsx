@@ -28,7 +28,7 @@ export function AuditsSection() {
         </div>
 
         {/* Content Container */}
-        <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20  grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-[var(--white)] primary-rounded p-6 sm:p-10 border border-[var(--primary)]/20  grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Side: 13 Audit Items Grid */}
           <div className="lg:col-span-7 space-y-4">
             <div className="flex items-center gap-2 mb-2">
@@ -42,7 +42,7 @@ export function AuditsSection() {
               {auditsData.auditsList.map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors"
+                  className="flex items-center gap-3 p-3 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors"
                 >
                   <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
                   <span className="text-xs sm:text-sm font-medium text-[var(--black)]/80">
@@ -55,7 +55,7 @@ export function AuditsSection() {
 
           {/* Right Side: Audit Imagery */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[var(--primary)]/15  group">
+            <div className="relative h-48 sm:h-56 primary-rounded overflow-hidden border border-[var(--primary)]/15  group">
               <Image
                 src="/hero_interior.png"
                 alt="Audit Review Team"
@@ -73,7 +73,7 @@ export function AuditsSection() {
               </div>
             </div>
 
-            <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[var(--primary)]/15  group">
+            <div className="relative h-48 sm:h-56 primary-rounded overflow-hidden border border-[var(--primary)]/15  group">
               <Image
                 src="/why_excellence.png"
                 alt="Management Compliance Review"
