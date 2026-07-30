@@ -29,14 +29,14 @@ Welcome to the modernized web platform for **AMAZE Property Management Solutions
 
 ## 🛠️ Technology Stack
 
-| Category | Technology |
-| :--- | :--- |
-| **Framework** | [Next.js](https://nextjs.org/) 15 (App Router) |
-| **Language** | [TypeScript](https://www.typescriptlang.org/) |
-| **Styling** | Tailwind CSS v4 & Vanilla CSS Variables (`globals.css`) |
+| Category              | Technology                                                   |
+| :-------------------- | :----------------------------------------------------------- |
+| **Framework**         | [Next.js](https://nextjs.org/) 15 (App Router)               |
+| **Language**          | [TypeScript](https://www.typescriptlang.org/)                |
+| **Styling**           | Tailwind CSS v4 & Vanilla CSS Variables (`globals.css`)      |
 | **Animation Engines** | GSAP, GSAP ScrollTrigger, Framer Motion, Lenis Smooth Scroll |
-| **Icon System** | [Lucide React](https://lucide.dev/) |
-| **Package Manager** | `pnpm` (or `npm` / `yarn`) |
+| **Icon System**       | [Lucide React](https://lucide.dev/)                          |
+| **Package Manager**   | `pnpm` (or `npm` / `yarn`)                                   |
 
 ---
 
@@ -79,6 +79,7 @@ Follow these step-by-step instructions to clone, install, and run the project lo
 ### 📋 Prerequisites
 
 Ensure you have the following installed on your operating system:
+
 - **Node.js**: `v18.17.0` or higher (Node v20+ recommended)
 - **Package Manager**: `pnpm` (v8 or higher) or `npm` / `yarn`
 
@@ -92,16 +93,19 @@ cd amazepms.com
 ### 2️⃣ Install Dependencies
 
 Using `pnpm` (recommended):
+
 ```bash
 pnpm install
 ```
 
 Or using `npm`:
+
 ```bash
 npm install
 ```
 
 Or using `yarn`:
+
 ```bash
 yarn install
 ```
@@ -109,6 +113,7 @@ yarn install
 ### 3️⃣ Start Development Server
 
 Run the development server locally:
+
 ```bash
 pnpm dev
 ```
@@ -122,31 +127,30 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 To test type-safety and ensure zero build errors before deploying:
 
 ### Type Check (TypeScript Verification)
+
 ```bash
 pnpm exec tsc --noEmit
 ```
 
 ### Production Build
+
 ```bash
 pnpm run build
 ```
 
 ### Production Preview Server
+
 ```bash
 pnpm run start
 ```
 
----
+## 👨‍💻 Developer & Author
 
-## 📞 Corporate Contact & Operations
-
-**AMAZE Property Management Solutions Pvt. Ltd**  
-*Action Group of Companies*  
-- **Headquarters**: 4th Floor, High Mark Chambers, Khajaguda X Road, Cyberabad, Hyderabad - 500008, Telangana, India.
-- **24/7 Helpline**: `+91 9100694137`
-- **Official Email**: `info@amazepms.com`
-- **Website**: [amazepms.com](https://amazepms.com)
+- **Developer**: Muksitul Islam
+- **Role**: Frontend / Full-Stack Software Engineer
+- **Task**: Amaze PMS Enterprise Website Redesign
+- **Repository**: [amazepms.com-redesign](https://github.com/MISFOfficial/amazepms.com-redesign)
 
 ---
 
-Developed with ❤️ for **AMAZE PMS Pvt. Ltd**. All Rights Reserved.
+Developed with ❤️ by **Muksitul Islam** for **AMAZE PMS Pvt. Ltd**. All Rights Reserved.
