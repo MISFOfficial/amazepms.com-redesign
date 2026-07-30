@@ -51,7 +51,7 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
   };
 
   return (
-    <div className="bg-[var(--white)] rounded-2xl sm:rounded-3xl border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden flex flex-col justify-between group text-[var(--black)]">
+    <div className="bg-[var(--white)] primary-rounded  border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden flex flex-col justify-between group text-[var(--black)]">
       {/* Top Logo Container */}
       <div className="relative p-8 bg-[var(--primary)]/5 flex items-center justify-center min-h-[200px] border-b border-[var(--primary)]/15">
         {/* Top-Left Category Badge */}
