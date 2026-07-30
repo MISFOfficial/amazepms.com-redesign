@@ -7,9 +7,9 @@ import { ChevronRight, Mail, Phone, AtSign } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <section className="relative w-full bg-[#051336] py-16 sm:py-20 lg:py-24 border-b border-blue-900/40 overflow-hidden text-center text-white">
-      {/* Background Skyscraper City Image with Dark Overlay matching Screenshot */}
-      <div className="absolute inset-0 z-0 opacity-25">
+    <section className="relative w-full bg-[var(--white)] py-16 sm:py-20 lg:py-24 border-b border-[var(--primary)]/10 overflow-hidden text-center text-[var(--black)]">
+      {/* Background Skyscraper Image with Light Overlay */}
+      <div className="absolute inset-0 z-0 opacity-10">
         <Image
           src="/hero_building.png"
           alt="Amaze PMS Contact Us Skyscraper"
@@ -17,29 +17,29 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-[#051336]/80 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-[var(--white)]/70" />
       </div>
 
-      {/* Decorative Icon Watermarks matching Screenshot */}
-      <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-15 pointer-events-none hidden sm:flex items-center gap-8 text-white">
+      {/* Decorative Icon Watermarks */}
+      <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-5 pointer-events-none hidden sm:flex items-center gap-8 text-[var(--primary)]">
         <Mail className="w-24 h-24 stroke-[1]" />
         <Phone className="w-24 h-24 stroke-[1]" />
         <AtSign className="w-24 h-24 stroke-[1]" />
       </div>
 
       <div className="ratio relative z-10 flex flex-col items-center justify-center space-y-3">
-        {/* Title matching Screenshot */}
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white">
+        {/* Page Title */}
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[var(--primary)]">
           Contact Us
         </h1>
 
-        {/* Breadcrumb matching Screenshot: Home > Contact */}
-        <nav className="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-300 font-medium">
-          <Link href="/" className="hover:text-white transition-colors">
+        {/* Breadcrumb Navigation: Home > Contact */}
+        <nav className="inline-flex items-center gap-2 text-xs sm:text-sm text-[var(--black)]/70 font-medium">
+          <Link href="/" className="hover:text-[var(--secondary)] transition-colors">
             Home
           </Link>
-          <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-          <span className="text-cyan-400 font-semibold">Contact</span>
+          <ChevronRight className="w-3.5 h-3.5 opacity-50" />
+          <span className="text-[var(--secondary)] font-semibold">Contact</span>
         </nav>
       </div>
     </section>
@@ -47,3 +47,4 @@ export function HeroSection() {
 }
 
 export default HeroSection;
+
