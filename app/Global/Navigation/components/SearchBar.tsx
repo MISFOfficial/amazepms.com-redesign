@@ -67,30 +67,6 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
           </span>
         )}
       </div>
-
-      {/* Autocomplete Dropdown */}
-      {isFocused && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-(--white) border border-slate-300 p-2 z-50 primary-rounded ">
-          <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 px-2 font-mono">
-            Navigation Matches
-          </div>
-          <div className="space-y-0.5 max-h-48 overflow-y-auto custom-scrollbar">
-            {filteredNav.map((item) => (
-              <Link
-                key={item.title}
-                href={item.href}
-                onClick={() => {
-                  setIsFocused(false);
-                  onSearchSelect?.();
-                }}
-                className="block px-2 py-1.5 text-xs font-semibold text-(--black) hover:bg-(--black) hover:text-(--white) primary-rounded transition-colors"
-              >
-                {item.title}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 };
