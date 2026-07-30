@@ -5,25 +5,25 @@ import { PieChart as PieIcon } from "lucide-react";
 
 export const SectorPieChart: React.FC = () => {
   const sectors = [
-    { label: "Residential Communities", percentage: 50, color: "bg-blue-500", hex: "#3b82f6" },
+    { label: "Residential Communities", percentage: 50, color: "bg-blue-600", hex: "#2563eb" },
     { label: "Commercial & IT Parks", percentage: 20, color: "bg-red-500", hex: "#ef4444" },
     { label: "Corporate Offices", percentage: 10, color: "bg-amber-500", hex: "#f59e0b" },
     { label: "Educational Institutions", percentage: 8, color: "bg-emerald-500", hex: "#10b981" },
     { label: "Malls, Multiplex & Retail", percentage: 5, color: "bg-indigo-500", hex: "#6366f1" },
     { label: "Hospitals & Clinics", percentage: 4, color: "bg-purple-500", hex: "#a855f7" },
-    { label: "Warehouses & Pharma", percentage: 3, color: "bg-cyan-400", hex: "#22d3ee" },
+    { label: "Warehouses & Pharma", percentage: 3, color: "bg-teal-500", hex: "#14b8a6" },
   ];
 
   return (
-    <div className="bg-[#071330] rounded-3xl p-6 sm:p-8 border border-blue-900/40 shadow-2xl space-y-6">
+    <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl space-y-6 text-[var(--black)]">
       {/* Header */}
-      <div className="flex items-center gap-3 pb-4 border-b border-white/10">
-        <PieIcon className="w-6 h-6 text-cyan-400" />
+      <div className="flex items-center gap-3 pb-4 border-b border-[var(--primary)]/15">
+        <PieIcon className="w-6 h-6 text-[var(--secondary)]" />
         <div>
-          <h3 className="text-xl font-bold text-white tracking-tight">
+          <h3 className="text-xl font-bold text-[var(--primary)] tracking-tight">
             Client Sector Distribution
           </h3>
-          <span className="text-xs font-mono text-cyan-300">
+          <span className="text-xs font-mono text-[var(--secondary)]">
             Portfolio Breakdown Across PAN India
           </span>
         </div>
@@ -40,7 +40,7 @@ export const SectorPieChart: React.FC = () => {
               cy="50"
               r="38"
               fill="transparent"
-              stroke="#3b82f6"
+              stroke="#2563eb"
               strokeWidth="20"
               strokeDasharray="119.38 119.38"
               strokeDashoffset="0"
@@ -106,7 +106,7 @@ export const SectorPieChart: React.FC = () => {
               cy="50"
               r="38"
               fill="transparent"
-              stroke="#22d3ee"
+              stroke="#14b8a6"
               strokeWidth="20"
               strokeDasharray="7.16 231.60"
               strokeDashoffset="-231.58"
@@ -115,29 +115,29 @@ export const SectorPieChart: React.FC = () => {
 
           {/* Inner Center Stat */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <span className="text-2xl font-extrabold text-white font-mono">100+</span>
-            <span className="text-[10px] font-mono font-semibold text-cyan-300 uppercase">
+            <span className="text-2xl font-extrabold text-[var(--primary)] font-mono">100+</span>
+            <span className="text-[10px] font-mono font-semibold text-[var(--secondary)] uppercase">
               PORTFOLIOS
             </span>
           </div>
         </div>
 
-        {/* Legend Grid matching Screenshot */}
+        {/* Legend Grid */}
         <div className="space-y-2.5 w-full">
           {sectors.map((sec, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-between p-2.5 rounded-xl bg-white/5 border border-white/10"
+              className="flex items-center justify-between p-2.5 rounded-xl bg-[var(--primary)]/5 border border-[var(--primary)]/15"
             >
               <div className="flex items-center gap-2.5">
                 <span
                   className={`w-3 h-3 rounded-full shrink-0 ${sec.color}`}
                 />
-                <span className="text-xs sm:text-sm font-medium text-slate-200">
+                <span className="text-xs sm:text-sm font-medium text-[var(--black)]/85">
                   {sec.label}
                 </span>
               </div>
-              <span className="text-xs font-mono font-bold text-cyan-300">
+              <span className="text-xs font-mono font-bold text-[var(--secondary)]">
                 {sec.percentage}%
               </span>
             </div>
@@ -149,3 +149,4 @@ export const SectorPieChart: React.FC = () => {
 };
 
 export default SectorPieChart;
+

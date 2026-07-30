@@ -9,7 +9,6 @@ import {
   Warehouse,
   GraduationCap,
   Factory,
-  CheckCircle2,
 } from "lucide-react";
 import { ClientCategoryGroup } from "./Content";
 
@@ -23,55 +22,55 @@ export const ClientCategoryCard: React.FC<ClientCategoryCardProps> = ({
   const getIcon = () => {
     switch (group.iconName) {
       case "Building2":
-        return <Building2 className="w-5 h-5 text-cyan-400" />;
+        return <Building2 className="w-5 h-5 text-[var(--secondary)]" />;
       case "Home":
-        return <Home className="w-5 h-5 text-cyan-400" />;
+        return <Home className="w-5 h-5 text-[var(--secondary)]" />;
       case "ShoppingBag":
-        return <ShoppingBag className="w-5 h-5 text-cyan-400" />;
+        return <ShoppingBag className="w-5 h-5 text-[var(--secondary)]" />;
       case "Hospital":
-        return <Hospital className="w-5 h-5 text-cyan-400" />;
+        return <Hospital className="w-5 h-5 text-[var(--secondary)]" />;
       case "Warehouse":
-        return <Warehouse className="w-5 h-5 text-cyan-400" />;
+        return <Warehouse className="w-5 h-5 text-[var(--secondary)]" />;
       case "GraduationCap":
-        return <GraduationCap className="w-5 h-5 text-cyan-400" />;
+        return <GraduationCap className="w-5 h-5 text-[var(--secondary)]" />;
       case "Factory":
-        return <Factory className="w-5 h-5 text-cyan-400" />;
+        return <Factory className="w-5 h-5 text-[var(--secondary)]" />;
       default:
-        return <Building2 className="w-5 h-5 text-cyan-400" />;
+        return <Building2 className="w-5 h-5 text-[var(--secondary)]" />;
     }
   };
 
   return (
-    <div className="client-category-card bg-[#071330] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-blue-900/40 shadow-2xl hover:border-cyan-500/50 transition-all duration-500 flex flex-col justify-between h-full group">
+    <div className="client-category-card bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full group text-[var(--black)]">
       <div>
         {/* Header: Icon + Title + Count Badge */}
-        <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
+        <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-[var(--primary)]/15">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-950/80 border border-cyan-500/30 flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
+            <div className="w-10 h-10 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
               {getIcon()}
             </div>
 
-            <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors">
+            <h3 className="text-lg sm:text-xl font-bold text-[var(--primary)] tracking-tight group-hover:text-[var(--secondary)] transition-colors">
               {group.categoryTitle}
             </h3>
           </div>
 
-          <span className="text-[10px] font-mono font-bold text-cyan-300 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-blue-950 border border-cyan-500/30 shrink-0">
+          <span className="text-[10px] font-mono font-bold text-[var(--primary)] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/20 shrink-0">
             {group.countBadge}
           </span>
         </div>
 
-        {/* Numbered Client List matching Screenshot verbatim */}
+        {/* Numbered Client List */}
         <div className="space-y-2">
           {group.clients.map((client, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-2.5 p-2 rounded-lg bg-white/5 border border-white/5 hover:border-cyan-500/30 transition-colors"
+              className="flex items-start gap-2.5 p-2 rounded-lg bg-[var(--primary)]/5 border border-[var(--primary)]/15 hover:border-[var(--secondary)] transition-colors"
             >
-              <span className="text-xs font-mono font-bold text-cyan-400 shrink-0 mt-0.5">
+              <span className="text-xs font-mono font-bold text-[var(--secondary)] shrink-0 mt-0.5">
                 {idx + 1}.
               </span>
-              <span className="text-xs sm:text-sm text-slate-200 font-medium leading-tight">
+              <span className="text-xs sm:text-sm text-[var(--black)]/85 font-medium leading-tight">
                 {client}
               </span>
             </div>
@@ -83,3 +82,4 @@ export const ClientCategoryCard: React.FC<ClientCategoryCardProps> = ({
 };
 
 export default ClientCategoryCard;
+

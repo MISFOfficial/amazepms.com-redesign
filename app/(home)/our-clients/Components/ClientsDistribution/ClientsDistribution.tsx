@@ -49,28 +49,25 @@ export function ClientsDistribution() {
     .filter((cat) => cat.clients.length > 0);
 
   return (
-    <section className="relative w-full bg-slate-950 py-16 sm:py-24 border-b border-blue-950/80 overflow-hidden text-white">
-      {/* Background Mesh */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-25 pointer-events-none" />
-
+    <section className="relative w-full bg-[var(--white)] py-16 sm:py-24 border-b border-[var(--primary)]/10 overflow-hidden text-[var(--black)]">
       <div className="ratio relative z-10 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/90 border border-cyan-500/30 text-cyan-300 text-xs font-semibold rounded-full shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
             <span className="font-mono uppercase text-[11px] sm:text-xs">
               ESTEEMED CLIENTELE
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
             Client{" "}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">
+            <span className="text-[var(--secondary)]">
               Directory & Sectors
             </span>
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-300 font-sans max-w-xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-[var(--black)]/80 font-sans max-w-xl mx-auto leading-relaxed font-normal">
             Trusted by over 100+ prestigious commercial parks, residential
             communities, healthcare networks, and industrial complexes.
           </p>
@@ -78,13 +75,13 @@ export function ClientsDistribution() {
 
         {/* Client Search Bar */}
         <div className="max-w-md mx-auto relative">
-          <Search className="w-4 h-4 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
+          <Search className="w-4 h-4 text-[var(--black)]/40 absolute left-4 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             placeholder="Search client name..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 rounded-full bg-[#071330] border border-blue-900/60 text-white placeholder-slate-400 text-xs sm:text-sm focus:outline-none focus:border-cyan-400/60 shadow-lg"
+            className="w-full pl-11 pr-4 py-3 rounded-full bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] shadow-md"
           />
         </div>
 
@@ -108,3 +105,4 @@ export function ClientsDistribution() {
 }
 
 export default ClientsDistribution;
+
