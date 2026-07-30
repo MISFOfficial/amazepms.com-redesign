@@ -30,7 +30,7 @@ export const AboutImages: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="absolute -bottom-6 sm:-bottom-8 right-2 sm:right-6 w-[55%] sm:w-[50%] h-[200px] sm:h-[260px] primary-rounded overflow-hidden  border-4 border-white bg-slate-800 z-10 group"
+        className="absolute -bottom-6 sm:-bottom-20 right-2 sm:right-6 w-[55%] sm:w-[50%] h-[200px] sm:h-[260px] primary-rounded overflow-hidden  border-4 border-white bg-slate-800 z-10 group hidden sm:block"
       >
         <Image
           src="/About/aboutimgmobile.png"
