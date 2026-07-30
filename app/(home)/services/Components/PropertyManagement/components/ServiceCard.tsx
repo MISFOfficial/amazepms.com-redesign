@@ -21,6 +21,7 @@ import {
   Car,
   TrendingUp,
   Paintbrush,
+  ArrowUpRight,
 } from "lucide-react";
 import { PropertyServiceItem } from "./Content";
 
@@ -32,60 +33,80 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ item }) => {
   const renderIcon = () => {
     switch (item.iconType) {
       case "security":
-        return <ShieldCheck className="w-8 h-8 text-red-600" />;
+        return <ShieldCheck className="w-6 h-6 text-cyan-400" />;
       case "housekeeping":
-        return <Home className="w-8 h-8 text-emerald-600" />;
+        return <Home className="w-6 h-6 text-cyan-400" />;
       case "technical":
-        return <Wrench className="w-8 h-8 text-blue-600" />;
+        return <Wrench className="w-6 h-6 text-cyan-400" />;
       case "pest":
-        return <Bug className="w-8 h-8 text-red-500" />;
+        return <Bug className="w-6 h-6 text-cyan-400" />;
       case "helpdesk":
-        return <Headphones className="w-8 h-8 text-amber-600" />;
+        return <Headphones className="w-6 h-6 text-cyan-400" />;
       case "gardening":
-        return <Sprout className="w-8 h-8 text-emerald-500" />;
+        return <Sprout className="w-6 h-6 text-cyan-400" />;
       case "pool":
-        return <Waves className="w-8 h-8 text-cyan-600" />;
+        return <Waves className="w-6 h-6 text-cyan-400" />;
       case "clubhouse":
-        return <Building className="w-8 h-8 text-indigo-600" />;
+        return <Building className="w-6 h-6 text-cyan-400" />;
       case "facade":
-        return <Sparkles className="w-8 h-8 text-blue-500" />;
+        return <Sparkles className="w-6 h-6 text-cyan-400" />;
       case "tenant":
-        return <Users className="w-8 h-8 text-sky-600" />;
+        return <Users className="w-6 h-6 text-cyan-400" />;
       case "homerepairs":
-        return <Search className="w-8 h-8 text-red-500" />;
+        return <Search className="w-6 h-6 text-cyan-400" />;
       case "events":
-        return <PartyPopper className="w-8 h-8 text-amber-500" />;
+        return <PartyPopper className="w-6 h-6 text-cyan-400" />;
       case "officestaff":
-        return <UserCheck className="w-8 h-8 text-indigo-500" />;
+        return <UserCheck className="w-6 h-6 text-cyan-400" />;
       case "payroll":
-        return <CreditCard className="w-8 h-8 text-teal-600" />;
+        return <CreditCard className="w-6 h-6 text-cyan-400" />;
       case "repairmaint":
-        return <Cog className="w-8 h-8 text-blue-600" />;
+        return <Cog className="w-6 h-6 text-cyan-400" />;
       case "homecleaning":
-        return <Paintbrush className="w-8 h-8 text-emerald-600" />;
+        return <Paintbrush className="w-6 h-6 text-cyan-400" />;
       case "maid":
-        return <Sparkle className="w-8 h-8 text-cyan-500" />;
+        return <Sparkle className="w-6 h-6 text-cyan-400" />;
       case "parking":
-        return <Car className="w-8 h-8 text-blue-600" />;
+        return <Car className="w-6 h-6 text-cyan-400" />;
       case "revenue":
-        return <TrendingUp className="w-8 h-8 text-cyan-500" />;
+        return <TrendingUp className="w-6 h-6 text-cyan-400" />;
     }
   };
 
   return (
-    <div className="group relative bg-white rounded-xl overflow-hidden border border-slate-200 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col h-full text-center">
-      {/* Top Icon Area matching Screenshot */}
-      <div className="p-6 bg-gradient-to-b from-white to-slate-50 flex items-center justify-center flex-1 min-h-[110px]">
-        <div className="w-14 h-14 rounded-2xl bg-white border border-slate-100 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          {renderIcon()}
+    <div className="property-service-card group relative bg-[#071330] rounded-2xl p-5 sm:p-6 border border-blue-900/40 shadow-xl hover:border-cyan-500/50 hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between h-full">
+      {/* Background Radial Glow */}
+      <div className="absolute -right-10 -bottom-10 w-36 h-36 bg-blue-600/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500 pointer-events-none" />
+
+      <div>
+        {/* Top Header: Badge + Number */}
+        <div className="flex items-center justify-between gap-2 mb-4">
+          <span className="text-[10px] font-mono font-bold text-cyan-300 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-blue-950/90 border border-cyan-500/30">
+            {item.category}
+          </span>
+          <span className="text-xs font-mono font-bold text-slate-500">
+            {item.number}/19
+          </span>
+        </div>
+
+        {/* Icon & Title */}
+        <div className="flex items-center gap-3.5 mb-2">
+          <div className="w-11 h-11 rounded-xl bg-blue-950/80 border border-cyan-500/30 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all duration-300 shadow-inner">
+            {renderIcon()}
+          </div>
+
+          <h3 className="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors leading-snug">
+            {item.title}
+          </h3>
         </div>
       </div>
 
-      {/* Bottom Dark Navy Bar matching Screenshot */}
-      <div className="bg-[#051336] p-3 border-t border-blue-900/40">
-        <h4 className="text-xs sm:text-sm font-semibold text-white tracking-tight group-hover:text-cyan-300 transition-colors line-clamp-2">
-          {item.title}
-        </h4>
+      {/* Footer Arrow & Accent Line */}
+      <div className="pt-3 mt-3 border-t border-white/10 flex items-center justify-between">
+        <span className="text-[11px] font-mono text-slate-400 group-hover:text-slate-200 transition-colors">
+          Full Operational Support
+        </span>
+        <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
       </div>
     </div>
   );
