@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "./Components/HeroSection/HeroSection";
-import StrengthGrid from "./Components/StrengthGrid/StrengthGrid";
 import CallBanner from "../Components/CallBanner/CallBanner";
+import StrengthGrid from "./Components/StrengthGrid/StrengthGrid";
 
 export const metadata = {
   title: "Our Strength | Amaze PMS",

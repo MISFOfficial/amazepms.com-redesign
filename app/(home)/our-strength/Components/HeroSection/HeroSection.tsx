@@ -4,21 +4,12 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import PropertyPattern from "@/app/Global/Patterns/PropertyPattern";
 
 export function HeroSection() {
   return (
     <section className="relative w-full bg-[var(--white)] py-16 sm:py-20 lg:py-24 border-b border-[var(--primary)]/10 overflow-hidden text-center text-[var(--black)]">
-      {/* Background Skyscraper City Image with Light Overlay */}
-      <div className="absolute inset-0 z-0 opacity-10">
-        <Image
-          src="/hero_tower.png"
-          alt="Amaze PMS Our Strength Skyscraper"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-[var(--white)]/70" />
-      </div>
+      <PropertyPattern />
 
       <div className="ratio relative z-10 flex flex-col items-center justify-center space-y-3">
         {/* Page Title */}
@@ -26,18 +17,13 @@ export function HeroSection() {
           Our Strength
         </h1>
 
-        {/* Breadcrumb Navigation: Home > Our Strength */}
-        <nav className="inline-flex items-center gap-2 text-xs sm:text-sm text-[var(--black)]/70 font-medium">
-          <Link href="/" className="hover:text-[var(--secondary)] transition-colors">
-            Home
-          </Link>
-          <ChevronRight className="w-3.5 h-3.5 opacity-50" />
-          <span className="text-[var(--secondary)] font-semibold">Our Strength</span>
-        </nav>
+        <p className="text-xs sm:text-sm text-[var(--black)]/80 font-sans max-w-xl mx-auto leading-relaxed font-normal">
+          Unrivaled operational scale, 100% in-house workforce, military
+          compliance, and statutory staff welfare across PAN India.
+        </p>
       </div>
     </section>
   );
 }
 
 export default HeroSection;
-
