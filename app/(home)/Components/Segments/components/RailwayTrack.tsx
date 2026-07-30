@@ -72,7 +72,7 @@ export const RailwayTrack: React.FC = () => {
               end: "top 50%",
               scrub: 0.5,
             },
-          }
+          },
         );
       });
     }, containerRef);
@@ -130,7 +130,7 @@ export const RailwayTrack: React.FC = () => {
             fill="var(--secondary)"
             stroke="var(--white)"
             strokeWidth="2"
-            className="shadow-lg"
+            className=""
           />
         </svg>
       </div>
@@ -146,4 +146,3 @@ export const RailwayTrack: React.FC = () => {
 };
 
 export default RailwayTrack;
-

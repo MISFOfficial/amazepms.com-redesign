@@ -29,7 +29,7 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
         );
       case "action_force":
         return (
-          <div className="w-24 h-24 rounded-full bg-[var(--primary)] border-4 border-[var(--primary)]/80 shadow-xl flex flex-col items-center justify-center text-[var(--white)] text-center p-2">
+          <div className="w-24 h-24 rounded-full bg-[var(--primary)] border-4 border-[var(--primary)]/80  flex flex-col items-center justify-center text-[var(--white)] text-center p-2">
             <Shield className="w-8 h-8 text-[var(--secondary)] mb-0.5" />
             <span className="text-[9px] font-extrabold tracking-widest uppercase font-mono">
               ACTION FORCE
@@ -38,7 +38,7 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
         );
       case "afs":
         return (
-          <div className="w-24 h-24 rounded-full bg-[var(--primary)] shadow-xl flex flex-col items-center justify-center text-[var(--white)] text-center p-2 border-2 border-[var(--secondary)]">
+          <div className="w-24 h-24 rounded-full bg-[var(--primary)]  flex flex-col items-center justify-center text-[var(--white)] text-center p-2 border-2 border-[var(--secondary)]">
             <span className="text-xl font-black tracking-tighter font-sans text-[var(--secondary)]">
               AFS
             </span>
@@ -51,11 +51,11 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
   };
 
   return (
-    <div className="bg-[var(--white)] rounded-2xl sm:rounded-3xl border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between group text-[var(--black)]">
+    <div className="bg-[var(--white)] rounded-2xl sm:rounded-3xl border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden flex flex-col justify-between group text-[var(--black)]">
       {/* Top Logo Container */}
       <div className="relative p-8 bg-[var(--primary)]/5 flex items-center justify-center min-h-[200px] border-b border-[var(--primary)]/15">
         {/* Top-Left Category Badge */}
-        <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] border border-[var(--primary)]/20 text-[11px] font-mono font-bold tracking-wide shadow-xs">
+        <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] border border-[var(--primary)]/20 text-[11px] font-mono font-bold tracking-wide ">
           {partner.badge}
         </div>
 
@@ -97,4 +97,3 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
 };
 
 export default PartnerCard;
-

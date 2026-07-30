@@ -5,17 +5,52 @@ import { PieChart as PieIcon } from "lucide-react";
 
 export const SectorPieChart: React.FC = () => {
   const sectors = [
-    { label: "Residential Communities", percentage: 50, color: "bg-blue-600", hex: "#2563eb" },
-    { label: "Commercial & IT Parks", percentage: 20, color: "bg-red-500", hex: "#ef4444" },
-    { label: "Corporate Offices", percentage: 10, color: "bg-amber-500", hex: "#f59e0b" },
-    { label: "Educational Institutions", percentage: 8, color: "bg-emerald-500", hex: "#10b981" },
-    { label: "Malls, Multiplex & Retail", percentage: 5, color: "bg-indigo-500", hex: "#6366f1" },
-    { label: "Hospitals & Clinics", percentage: 4, color: "bg-purple-500", hex: "#a855f7" },
-    { label: "Warehouses & Pharma", percentage: 3, color: "bg-teal-500", hex: "#14b8a6" },
+    {
+      label: "Residential Communities",
+      percentage: 50,
+      color: "bg-blue-600",
+      hex: "#2563eb",
+    },
+    {
+      label: "Commercial & IT Parks",
+      percentage: 20,
+      color: "bg-red-500",
+      hex: "#ef4444",
+    },
+    {
+      label: "Corporate Offices",
+      percentage: 10,
+      color: "bg-amber-500",
+      hex: "#f59e0b",
+    },
+    {
+      label: "Educational Institutions",
+      percentage: 8,
+      color: "bg-emerald-500",
+      hex: "#10b981",
+    },
+    {
+      label: "Malls, Multiplex & Retail",
+      percentage: 5,
+      color: "bg-indigo-500",
+      hex: "#6366f1",
+    },
+    {
+      label: "Hospitals & Clinics",
+      percentage: 4,
+      color: "bg-purple-500",
+      hex: "#a855f7",
+    },
+    {
+      label: "Warehouses & Pharma",
+      percentage: 3,
+      color: "bg-teal-500",
+      hex: "#14b8a6",
+    },
   ];
 
   return (
-    <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl space-y-6 text-[var(--black)]">
+    <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 text-[var(--black)]">
       {/* Header */}
       <div className="flex items-center gap-3 pb-4 border-b border-[var(--primary)]/15">
         <PieIcon className="w-6 h-6 text-[var(--secondary)]" />
@@ -33,7 +68,10 @@ export const SectorPieChart: React.FC = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-8 py-4">
         {/* SVG Graphic */}
         <div className="relative w-48 h-48 sm:w-56 sm:h-56 shrink-0">
-          <svg viewBox="0 0 100 100" className="w-full h-full transform -rotate-90">
+          <svg
+            viewBox="0 0 100 100"
+            className="w-full h-full transform -rotate-90"
+          >
             {/* 50% Segment: Residential */}
             <circle
               cx="50"
@@ -115,7 +153,9 @@ export const SectorPieChart: React.FC = () => {
 
           {/* Inner Center Stat */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <span className="text-2xl font-extrabold text-[var(--primary)] font-mono">100+</span>
+            <span className="text-2xl font-extrabold text-[var(--primary)] font-mono">
+              100+
+            </span>
             <span className="text-[10px] font-mono font-semibold text-[var(--secondary)] uppercase">
               PORTFOLIOS
             </span>
@@ -149,4 +189,3 @@ export const SectorPieChart: React.FC = () => {
 };
 
 export default SectorPieChart;
-

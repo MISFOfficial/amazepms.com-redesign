@@ -13,7 +13,7 @@ export const AboutImages: React.FC = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative w-full h-[280px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden shadow-lg border border-slate-100 bg-slate-900 group"
+        className="relative w-full h-[280px] sm:h-[360px] lg:h-[400px] rounded-2xl overflow-hidden  border border-slate-100 bg-slate-900 group"
       >
         <Image
           src="/About/about1.png"
@@ -30,7 +30,7 @@ export const AboutImages: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="absolute -bottom-6 sm:-bottom-8 right-2 sm:right-6 w-[55%] sm:w-[50%] h-[200px] sm:h-[260px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-800 z-10 group"
+        className="absolute -bottom-6 sm:-bottom-8 right-2 sm:right-6 w-[55%] sm:w-[50%] h-[200px] sm:h-[260px] rounded-2xl overflow-hidden  border-4 border-white bg-slate-800 z-10 group"
       >
         <Image
           src="/About/aboutimgmobile.png"

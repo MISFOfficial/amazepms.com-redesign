@@ -23,7 +23,7 @@ export const WhyVisuals: React.FC = () => {
   return (
     <div className="relative w-full max-w-lg mx-auto lg:max-w-none py-4">
       {/* Background Graphic Accent Frame */}
-      <div className="relative w-full h-[360px] sm:h-[440px] rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-slate-900 group">
+      <div className="relative w-full h-[360px] sm:h-[440px] rounded-2xl overflow-hidden  border border-slate-200 bg-slate-900 group">
         <Image
           src="/why_workforce.png"
           alt="Amaze PMS Management Team"
@@ -34,7 +34,7 @@ export const WhyVisuals: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent pointer-events-none" />
 
         {/* Overlay Banner */}
-        <div className="absolute bottom-4 left-4 right-4 p-4 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/80 shadow-lg">
+        <div className="absolute bottom-4 left-4 right-4 p-4 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/80 ">
           <span className="text-xs font-bold text-blue-600 block uppercase tracking-wider font-mono">
             20+ MILLION SQ.FT MANAGED
           </span>
@@ -47,7 +47,7 @@ export const WhyVisuals: React.FC = () => {
       {/* Floating 3D "WHY US" Trophy Card (GSAP Animated) */}
       <div
         ref={floatCardRef}
-        className="absolute top-10 -right-2 sm:-right-6 w-[52%] sm:w-[48%] h-[200px] sm:h-[240px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 z-20 group"
+        className="absolute top-10 -right-2 sm:-right-6 w-[52%] sm:w-[48%] h-[200px] sm:h-[240px] rounded-2xl overflow-hidden  border-4 border-white bg-slate-900 z-20 group"
       >
         <Image
           src="/why_excellence.png"
@@ -57,7 +57,7 @@ export const WhyVisuals: React.FC = () => {
         />
 
         {/* Diagonal "WHY US" Label Badge */}
-        <div className="absolute top-3 right-3 bg-blue-600 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded shadow-md tracking-widest font-mono">
+        <div className="absolute top-3 right-3 bg-blue-600 text-white text-[11px] font-extrabold uppercase px-3 py-1 rounded  tracking-widest font-mono">
           WHY US ↗
         </div>
       </div>

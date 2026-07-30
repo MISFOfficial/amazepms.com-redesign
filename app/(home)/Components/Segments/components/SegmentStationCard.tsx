@@ -68,7 +68,7 @@ export const SegmentStationCard: React.FC<SegmentStationCardProps> = ({
       }`}
     >
       {/* Card Body Container */}
-      <div className="relative bg-[var(--white)] rounded-2xl p-5 sm:p-6 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 overflow-hidden group text-[var(--black)]">
+      <div className="relative bg-[var(--white)] rounded-2xl p-5 sm:p-6 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden group text-[var(--black)]">
         {/* Card Header & Station Badge */}
         <div
           className={`flex items-center gap-3 mb-3 ${
@@ -110,4 +110,3 @@ export const SegmentStationCard: React.FC<SegmentStationCardProps> = ({
 };
 
 export default SegmentStationCard;
-

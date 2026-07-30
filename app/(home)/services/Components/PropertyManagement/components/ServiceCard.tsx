@@ -74,7 +74,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ item }) => {
   };
 
   return (
-    <div className="property-service-card group relative bg-[var(--white)] rounded-2xl p-5 sm:p-6 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between h-full text-[var(--black)]">
+    <div className="property-service-card group relative bg-[var(--white)] rounded-2xl p-5 sm:p-6 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden flex flex-col justify-between h-full text-[var(--black)]">
       <div>
         {/* Top Header: Badge + Number */}
         <div className="flex items-center justify-between gap-2 mb-4">
@@ -110,4 +110,3 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ item }) => {
 };
 
 export default ServiceCard;
-

@@ -11,7 +11,7 @@ import { Sparkles } from "lucide-react";
 export function GalleryGrid() {
   const [activeFilter, setActiveFilter] = useState<string>("All");
   const [selectedItemIndex, setSelectedItemIndex] = useState<number | null>(
-    null
+    null,
   );
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -47,7 +47,7 @@ export function GalleryGrid() {
             trigger: containerRef.current,
             start: "top 80%",
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -57,7 +57,7 @@ export function GalleryGrid() {
   const handlePrev = () => {
     if (selectedItemIndex !== null) {
       setSelectedItemIndex(
-        (selectedItemIndex - 1 + filteredItems.length) % filteredItems.length
+        (selectedItemIndex - 1 + filteredItems.length) % filteredItems.length,
       );
     }
   };
@@ -73,7 +73,7 @@ export function GalleryGrid() {
       <div className="ratio relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
             <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
             <span className="font-mono uppercase text-[11px] sm:text-xs">
               VISUAL PORTFOLIO
@@ -82,13 +82,13 @@ export function GalleryGrid() {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
             Workforce & Operations{" "}
-            <span className="text-[var(--secondary)]">
-              Gallery
-            </span>
+            <span className="text-[var(--secondary)]">Gallery</span>
           </h2>
 
           <p className="text-xs sm:text-sm text-[var(--black)]/80 font-sans max-w-xl mx-auto leading-relaxed font-normal">
-            Real operational moments showcasing our uniformed security force, technical teams, classroom training sessions, and deep cleaning operations.
+            Real operational moments showcasing our uniformed security force,
+            technical teams, classroom training sessions, and deep cleaning
+            operations.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export function GalleryGrid() {
               onClick={() => setActiveFilter(cat)}
               className={`px-4 py-2 rounded-full text-xs font-semibold transition-all duration-300 ${
                 activeFilter === cat
-                  ? "bg-[var(--primary)] text-[var(--white)] shadow-md font-bold scale-105"
+                  ? "bg-[var(--primary)] text-[var(--white)]  font-bold scale-105"
                   : "bg-[var(--primary)]/5 text-[var(--black)]/80 border border-[var(--primary)]/15 hover:border-[var(--secondary)] hover:text-[var(--primary)]"
               }`}
             >
@@ -138,4 +138,3 @@ export function GalleryGrid() {
 }
 
 export default GalleryGrid;
-

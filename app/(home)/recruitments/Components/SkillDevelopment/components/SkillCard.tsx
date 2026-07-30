@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-import { CheckCircle2, GraduationCap, ShieldCheck, Wrench, Sparkles } from "lucide-react";
+import {
+  CheckCircle2,
+  GraduationCap,
+  ShieldCheck,
+  Wrench,
+  Sparkles,
+} from "lucide-react";
 import { SkillCardData } from "./Content";
 
 interface SkillCardProps {
@@ -23,7 +29,7 @@ export const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
   };
 
   return (
-    <div className="skill-dev-card bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full group text-[var(--black)]">
+    <div className="skill-dev-card bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 flex flex-col justify-between h-full group text-[var(--black)]">
       <div>
         {/* Card Header */}
         <div className="flex items-center justify-between mb-4">
@@ -57,4 +63,3 @@ export const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
 };
 
 export default SkillCard;
-

@@ -25,7 +25,7 @@ export function Partners() {
           {partnerLogos.map((logo) => (
             <div
               key={logo.id}
-              className="mx-4 sm:mx-6 px-6 py-3 bg-[var(--white)] border border-[var(--primary)]/15 rounded-lg flex items-center justify-center h-20 w-44 sm:w-52 shadow-xs hover:shadow-md hover:border-[var(--secondary)] transition-all duration-300 group cursor-pointer"
+              className="mx-4 sm:mx-6 px-6 py-3 bg-[var(--white)] border border-[var(--primary)]/15 rounded-lg flex items-center justify-center h-20 w-44 sm:w-52  hover: hover:border-[var(--secondary)] transition-all duration-300 group cursor-pointer"
             >
               <div className="relative w-full h-12 flex items-center justify-center">
                 <Image
@@ -44,4 +44,3 @@ export function Partners() {
 }
 
 export default Partners;
-

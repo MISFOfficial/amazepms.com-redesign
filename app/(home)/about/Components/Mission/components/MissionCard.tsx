@@ -21,7 +21,7 @@ export const MissionCard: React.FC<MissionCardProps> = ({ item }) => {
   };
 
   return (
-    <div className="w-full bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-[var(--primary)]/20 shadow-lg hover:shadow-xl transition-all duration-500 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
+    <div className="w-full bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-[var(--primary)]/20  hover: transition-all duration-500 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
       {/* Left Side Content */}
       <div className="space-y-4 max-w-2xl text-left">
         <div className="flex items-center gap-3">
@@ -45,7 +45,7 @@ export const MissionCard: React.FC<MissionCardProps> = ({ item }) => {
         <div className="absolute inset-3 rounded-full border-4 border-dashed border-[var(--secondary)]/40 group-hover:rotate-45 transition-transform duration-700" />
 
         {/* Inner Target Graphic Emblem */}
-        <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[var(--white)] shadow-md border border-[var(--primary)]/15 flex flex-col items-center justify-center gap-1.5 p-2 text-center group-hover:scale-105 transition-transform duration-300">
+        <div className="relative z-10 w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-[var(--white)]  border border-[var(--primary)]/15 flex flex-col items-center justify-center gap-1.5 p-2 text-center group-hover:scale-105 transition-transform duration-300">
           {renderIcon()}
           <span className="text-[11px] font-bold tracking-tight text-[var(--black)] font-sans">
             {item.title.replace("Our ", "")}
@@ -57,4 +57,3 @@ export const MissionCard: React.FC<MissionCardProps> = ({ item }) => {
 };
 
 export default MissionCard;
-

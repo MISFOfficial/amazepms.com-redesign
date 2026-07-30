@@ -21,7 +21,17 @@ export const AboutContent: React.FC = () => {
 
       {/* Description Paragraph */}
       <p className="text-xs sm:text-sm text-[var(--black)]/80 leading-relaxed font-normal">
-        Amaze PMS Pvt Ltd (AMAZE) is a Property Management division of ACTION GROUP of Companies founded in the year 2001 by Mr. Subhani Abdul a veteran from the Indian Navy, a Certified Security Practitioner, and a renowned name in the Service Industry. Amaze has its Head Quarters in Cyberabad, Telangana - INDIA, providing Property Management Solutions PAN INDIA, partnering with leading clientele with 15000 + strong strength of professionals. We specialize in offering comprehensive integrated Property Management Services such as Housekeeping, MEP (Mechanical, Electrical, Plumbing), Security, Pest Control, Gardening, STP & WTP, Parking, Swimming Pool Maintenance, office support services, deep cleaning services etc all these services are inhouse.
+        Amaze PMS Pvt Ltd (AMAZE) is a Property Management division of ACTION
+        GROUP of Companies founded in the year 2001 by Mr. Subhani Abdul a
+        veteran from the Indian Navy, a Certified Security Practitioner, and a
+        renowned name in the Service Industry. Amaze has its Head Quarters in
+        Cyberabad, Telangana - INDIA, providing Property Management Solutions
+        PAN INDIA, partnering with leading clientele with 15000 + strong
+        strength of professionals. We specialize in offering comprehensive
+        integrated Property Management Services such as Housekeeping, MEP
+        (Mechanical, Electrical, Plumbing), Security, Pest Control, Gardening,
+        STP & WTP, Parking, Swimming Pool Maintenance, office support services,
+        deep cleaning services etc all these services are inhouse.
       </p>
 
       {/* Checkmarks List */}
@@ -52,10 +62,10 @@ export const AboutContent: React.FC = () => {
       <div className="pt-2">
         <Link
           href="/contact"
-          className="inline-flex items-center justify-between gap-4 bg-[var(--white)] hover:bg-[var(--primary)] text-[var(--primary)] hover:text-[var(--white)] border-2 border-[var(--primary)] px-6 py-2.5 rounded-full transition-all duration-300 shadow-xs group font-semibold text-xs tracking-wider"
+          className="inline-flex items-center justify-between gap-4 bg-[var(--white)] hover:bg-[var(--primary)] text-[var(--primary)] hover:text-[var(--white)] border-2 border-[var(--primary)] px-6 py-2.5 rounded-full transition-all duration-300  group font-semibold text-xs tracking-wider"
         >
           <span>GET STARTED WITH US</span>
-          <div className="w-8 h-8 rounded-full bg-[var(--primary)] text-[var(--white)] group-hover:bg-[var(--secondary)] flex items-center justify-center group-hover:scale-105 transition-transform shadow-xs">
+          <div className="w-8 h-8 rounded-full bg-[var(--primary)] text-[var(--white)] group-hover:bg-[var(--secondary)] flex items-center justify-center group-hover:scale-105 transition-transform ">
             <ArrowRight className="w-4 h-4" />
           </div>
         </Link>
@@ -65,4 +75,3 @@ export const AboutContent: React.FC = () => {
 };
 
 export default AboutContent;
-

@@ -62,7 +62,7 @@ export const ImageLightboxModal: React.FC<ImageLightboxModalProps> = ({
 
       {/* Center Image Container */}
       <div className="max-w-4xl max-h-[85vh] w-full flex flex-col items-center justify-center space-y-4">
-        <div className="relative w-full h-[60vh] rounded-2xl overflow-hidden border border-[var(--white)]/20 shadow-2xl">
+        <div className="relative w-full h-[60vh] rounded-2xl overflow-hidden border border-[var(--white)]/20 ">
           <Image
             src={item.src}
             alt={item.title}
@@ -90,4 +90,3 @@ export const ImageLightboxModal: React.FC<ImageLightboxModalProps> = ({
 };
 
 export default ImageLightboxModal;
-

@@ -10,9 +10,11 @@ export function RecruitmentStrategy() {
       <div className="ratio relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
             <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
-            <span className="font-mono uppercase text-[11px] sm:text-xs">RECRUITMENT</span>
+            <span className="font-mono uppercase text-[11px] sm:text-xs">
+              RECRUITMENT
+            </span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
@@ -21,7 +23,7 @@ export function RecruitmentStrategy() {
         </div>
 
         {/* Card Body Container */}
-        <div className="max-w-4xl mx-auto bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20 shadow-xl space-y-8">
+        <div className="max-w-4xl mx-auto bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20  space-y-8">
           {/* Man Power Sourcing Subhead */}
           <div className="space-y-4">
             <h3 className="text-xl sm:text-2xl font-bold text-[var(--primary)] tracking-tight text-center sm:text-left flex items-center gap-2 justify-center sm:justify-start">
@@ -81,4 +83,3 @@ export function RecruitmentStrategy() {
 }
 
 export default RecruitmentStrategy;
-

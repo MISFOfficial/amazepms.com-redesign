@@ -11,7 +11,7 @@ export function ServicePartners() {
       <div className="ratio relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
             <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
             <span className="font-mono uppercase text-[11px] sm:text-xs">
               STRATEGIC ALLIANCES
@@ -20,13 +20,12 @@ export function ServicePartners() {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
             Our Service{" "}
-            <span className="text-[var(--secondary)]">
-              Partners
-            </span>
+            <span className="text-[var(--secondary)]">Partners</span>
           </h2>
 
           <p className="text-xs sm:text-sm text-[var(--black)]/80 font-sans max-w-xl mx-auto leading-relaxed font-normal">
-            Collaborating with specialized statutory security and facility entities to deliver end-to-end operational excellence.
+            Collaborating with specialized statutory security and facility
+            entities to deliver end-to-end operational excellence.
           </p>
         </div>
 
@@ -42,4 +41,3 @@ export function ServicePartners() {
 }
 
 export default ServicePartners;
-

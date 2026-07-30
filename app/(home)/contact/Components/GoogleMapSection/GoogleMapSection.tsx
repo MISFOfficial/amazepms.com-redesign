@@ -11,7 +11,8 @@ export function GoogleMapSection() {
         <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold">
           <MapPin className="w-4 h-4 text-[var(--secondary)] shrink-0" />
           <span>
-            AMAZE Property Management Solutions Pvt. Ltd — High Mark Chambers, Khajaguda X road, Cyberabad, Hyderabad
+            AMAZE Property Management Solutions Pvt. Ltd — High Mark Chambers,
+            Khajaguda X road, Cyberabad, Hyderabad
           </span>
         </div>
 
@@ -19,7 +20,7 @@ export function GoogleMapSection() {
           href="https://maps.app.goo.gl/qi4uNcUrMo5bRhGC6"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[var(--secondary)] text-[var(--white)] text-xs font-bold hover:bg-[var(--white)] hover:text-[var(--primary)] transition-colors shadow-md"
+          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[var(--secondary)] text-[var(--white)] text-xs font-bold hover:bg-[var(--white)] hover:text-[var(--primary)] transition-colors "
         >
           <Navigation className="w-3.5 h-3.5" />
           <span>Get Directions</span>
@@ -44,4 +45,3 @@ export function GoogleMapSection() {
 }
 
 export default GoogleMapSection;
-

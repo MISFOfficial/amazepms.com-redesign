@@ -3,7 +3,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { propertyServicesData, PropertyServiceItem } from "./components/Content";
+import {
+  propertyServicesData,
+  PropertyServiceItem,
+} from "./components/Content";
 import ServiceCard from "./components/ServiceCard";
 import { Sparkles } from "lucide-react";
 
@@ -46,7 +49,7 @@ export function PropertyManagement() {
             trigger: containerRef.current,
             start: "top 80%",
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -58,7 +61,7 @@ export function PropertyManagement() {
       <div className="ratio relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-10 sm:mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
             <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
             <span className="font-mono uppercase text-[11px] sm:text-xs">
               COMPREHENSIVE PORTFOLIO
@@ -67,13 +70,13 @@ export function PropertyManagement() {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
             Property and Asset{" "}
-            <span className="text-[var(--secondary)]">
-              Management
-            </span>
+            <span className="text-[var(--secondary)]">Management</span>
           </h2>
 
           <p className="text-xs sm:text-sm text-[var(--black)]/80 font-sans max-w-xl mx-auto leading-relaxed font-normal">
-            Delivering 19 specialized facility, security, technical, and operational services tailored for commercial towers and residential communities.
+            Delivering 19 specialized facility, security, technical, and
+            operational services tailored for commercial towers and residential
+            communities.
           </p>
         </div>
 
@@ -85,7 +88,7 @@ export function PropertyManagement() {
               onClick={() => setActiveFilter(cat)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
                 activeFilter === cat
-                  ? "bg-[var(--primary)] text-[var(--white)] shadow-md font-bold scale-105"
+                  ? "bg-[var(--primary)] text-[var(--white)]  font-bold scale-105"
                   : "bg-[var(--white)] text-[var(--black)]/80 border border-[var(--primary)]/20 hover:border-[var(--secondary)] hover:text-[var(--secondary)]"
               }`}
             >
@@ -109,4 +112,3 @@ export function PropertyManagement() {
 }
 
 export default PropertyManagement;
-

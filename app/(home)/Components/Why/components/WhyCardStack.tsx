@@ -20,30 +20,34 @@ export const WhyCardStack: React.FC = () => {
   // Card themes & styling strictly using CSS variables from globals.css
   const cardThemes = [
     {
-      bg: "bg-[var(--primary)] text-[var(--white)] border-[var(--primary)] shadow-2xl",
+      bg: "bg-[var(--primary)] text-[var(--white)] border-[var(--primary)] ",
       accent: "text-[var(--secondary)]",
-      badgeBg: "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
+      badgeBg:
+        "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
       statColor: "text-[var(--secondary)]",
       cardLabel: "PILLAR 01",
     },
     {
-      bg: "bg-[var(--white)] text-[var(--black)] border border-[var(--primary)]/20 shadow-2xl",
+      bg: "bg-[var(--white)] text-[var(--black)] border border-[var(--primary)]/20 ",
       accent: "text-[var(--primary)]",
-      badgeBg: "bg-[var(--primary)]/10 text-[var(--primary)] border-[var(--primary)]/20",
+      badgeBg:
+        "bg-[var(--primary)]/10 text-[var(--primary)] border-[var(--primary)]/20",
       statColor: "text-[var(--primary)]",
       cardLabel: "PILLAR 02",
     },
     {
-      bg: "bg-[var(--black)] text-[var(--white)] border border-[var(--primary)]/40 shadow-2xl",
+      bg: "bg-[var(--black)] text-[var(--white)] border border-[var(--primary)]/40 ",
       accent: "text-[var(--secondary)]",
-      badgeBg: "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
+      badgeBg:
+        "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
       statColor: "text-[var(--secondary)]",
       cardLabel: "PILLAR 03",
     },
     {
-      bg: "bg-gradient-to-br from-[var(--primary)] to-[var(--black)] text-[var(--white)] border border-[var(--primary)]/40 shadow-2xl",
+      bg: "bg-gradient-to-br from-[var(--primary)] to-[var(--black)] text-[var(--white)] border border-[var(--primary)]/40 ",
       accent: "text-[var(--secondary)]",
-      badgeBg: "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
+      badgeBg:
+        "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
       statColor: "text-[var(--secondary)]",
       cardLabel: "PILLAR 04",
     },
@@ -130,7 +134,7 @@ export const WhyCardStack: React.FC = () => {
               style={{ zIndex: idx + 1 }}
             >
               <div
-                className={`w-full max-w-4xl rounded-2xl sm:rounded-[32px] p-5 sm:p-8 lg:p-10 ${theme.bg} shadow-xl lg:shadow-2xl transition-all duration-300 relative overflow-hidden flex flex-col justify-between my-auto`}
+                className={`w-full max-w-4xl rounded-2xl sm:rounded-[32px] p-5 sm:p-8 lg:p-10 ${theme.bg}  lg: transition-all duration-300 relative overflow-hidden flex flex-col justify-between my-auto`}
               >
                 {/* Card Top Header */}
                 <div>
@@ -204,4 +208,3 @@ export const WhyCardStack: React.FC = () => {
 };
 
 export default WhyCardStack;
-

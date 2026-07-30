@@ -2,12 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  CheckCircle2,
-} from "lucide-react";
+import { MapPin, Phone, Mail, CheckCircle2 } from "lucide-react";
 import { contactInfoData } from "./components/Content";
 import ContactForm from "./components/ContactForm";
 
@@ -18,11 +13,11 @@ export function ContactDetails() {
         {/* Main Grid: Left Services & Right Office Info */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left Column: Contact For Our Services */}
-          <div className="lg:col-span-6 bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl space-y-6 flex flex-col justify-between">
+          <div className="lg:col-span-6 bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 flex flex-col justify-between">
             <div className="space-y-6">
               {/* Logo & Title Header */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pb-4 border-b border-[var(--primary)]/15">
-                <div className="relative w-36 h-14 bg-[var(--white)] p-2 rounded-xl shrink-0 shadow-md border border-[var(--primary)]/10">
+                <div className="relative w-36 h-14 bg-[var(--white)] p-2 rounded-xl shrink-0  border border-[var(--primary)]/10">
                   <Image
                     src="/logo.png"
                     alt="Amaze PMS Logo"
@@ -76,12 +71,13 @@ export function ContactDetails() {
 
             {/* Bottom Accent */}
             <div className="pt-4 border-t border-[var(--primary)]/15 text-xs font-mono text-[var(--black)]/60">
-              ⚡ Available 24/7 for commercial & residential site management inquiries.
+              ⚡ Available 24/7 for commercial & residential site management
+              inquiries.
             </div>
           </div>
 
           {/* Right Column: Office Address & Stay Connected */}
-          <div className="lg:col-span-6 bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl space-y-6 flex flex-col justify-between">
+          <div className="lg:col-span-6 bg-[var(--white)] rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 flex flex-col justify-between">
             <div className="space-y-6">
               {/* Header */}
               <div>
@@ -148,7 +144,7 @@ export function ContactDetails() {
               </span>
               <a
                 href={`tel:${contactInfoData.phone}`}
-                className="px-4 py-2 rounded-xl bg-[var(--primary)] text-[var(--white)] font-bold text-xs hover:bg-[var(--secondary)] transition-colors shadow-md"
+                className="px-4 py-2 rounded-xl bg-[var(--primary)] text-[var(--white)] font-bold text-xs hover:bg-[var(--secondary)] transition-colors "
               >
                 Call Now
               </a>
@@ -166,4 +162,3 @@ export function ContactDetails() {
 }
 
 export default ContactDetails;
-

@@ -52,7 +52,7 @@ export function OpeningsList() {
             trigger: containerRef.current,
             start: "top 80%",
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -63,10 +63,10 @@ export function OpeningsList() {
     <section className="relative w-full bg-[var(--white)] py-16 sm:py-24 border-b border-[var(--primary)]/10 overflow-hidden text-[var(--black)]">
       <div className="ratio relative z-10 space-y-12">
         {/* Top Header Card Container */}
-        <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20  grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-4 text-center sm:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
               <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
               <span className="font-mono uppercase text-[11px]">
                 {careersHeaderData.badge}
@@ -94,7 +94,7 @@ export function OpeningsList() {
           </div>
 
           {/* Right Now Hiring Visual Graphic */}
-          <div className="lg:col-span-5 relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-[var(--primary)]/20 shadow-lg group">
+          <div className="lg:col-span-5 relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-[var(--primary)]/20  group">
             <Image
               src="/hero_interior.png"
               alt="Amaze PMS Now Hiring Corporate Recruitment"
@@ -104,7 +104,7 @@ export function OpeningsList() {
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/90 via-[var(--primary)]/40 to-transparent" />
 
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-              <div className="w-16 h-16 rounded-2xl bg-[var(--secondary)] text-[var(--white)] flex items-center justify-center font-extrabold shadow-xl mb-2">
+              <div className="w-16 h-16 rounded-2xl bg-[var(--secondary)] text-[var(--white)] flex items-center justify-center font-extrabold  mb-2">
                 <Briefcase className="w-8 h-8" />
               </div>
               <span className="text-lg font-black tracking-widest uppercase text-[var(--white)] font-mono">
@@ -173,4 +173,3 @@ export function OpeningsList() {
 }
 
 export default OpeningsList;
-

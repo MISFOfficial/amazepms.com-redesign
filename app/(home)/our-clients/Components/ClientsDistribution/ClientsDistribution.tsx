@@ -53,7 +53,7 @@ export function ClientsDistribution() {
       <div className="ratio relative z-10 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
             <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
             <span className="font-mono uppercase text-[11px] sm:text-xs">
               ESTEEMED CLIENTELE
@@ -62,9 +62,7 @@ export function ClientsDistribution() {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
             Client{" "}
-            <span className="text-[var(--secondary)]">
-              Directory & Sectors
-            </span>
+            <span className="text-[var(--secondary)]">Directory & Sectors</span>
           </h2>
 
           <p className="text-xs sm:text-sm text-[var(--black)]/80 font-sans max-w-xl mx-auto leading-relaxed font-normal">
@@ -81,7 +79,7 @@ export function ClientsDistribution() {
             placeholder="Search client name..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-11 pr-4 py-3 rounded-full bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] shadow-md"
+            className="w-full pl-11 pr-4 py-3 rounded-full bg-[var(--white)] border border-[var(--primary)]/20 text-[var(--black)] placeholder-[var(--black)]/40 text-xs sm:text-sm focus:outline-none focus:border-[var(--secondary)] "
           />
         </div>
 
@@ -105,4 +103,3 @@ export function ClientsDistribution() {
 }
 
 export default ClientsDistribution;
-

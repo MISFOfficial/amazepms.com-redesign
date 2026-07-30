@@ -41,7 +41,7 @@ export const ClientCategoryCard: React.FC<ClientCategoryCardProps> = ({
   };
 
   return (
-    <div className="client-category-card bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full group text-[var(--black)]">
+    <div className="client-category-card bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 flex flex-col justify-between h-full group text-[var(--black)]">
       <div>
         {/* Header: Icon + Title + Count Badge */}
         <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-[var(--primary)]/15">
@@ -82,4 +82,3 @@ export const ClientCategoryCard: React.FC<ClientCategoryCardProps> = ({
 };
 
 export default ClientCategoryCard;
-

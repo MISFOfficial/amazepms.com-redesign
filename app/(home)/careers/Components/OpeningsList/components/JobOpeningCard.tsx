@@ -14,7 +14,7 @@ export const JobOpeningCard: React.FC<JobOpeningCardProps> = ({
   onApply,
 }) => {
   return (
-    <div className="job-opening-card group bg-[var(--white)] rounded-2xl p-5 sm:p-6 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full text-[var(--black)]">
+    <div className="job-opening-card group bg-[var(--white)] rounded-2xl p-5 sm:p-6 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 flex flex-col justify-between h-full text-[var(--black)]">
       <div>
         {/* Header: Category Badge + Job Type */}
         <div className="flex items-center justify-between gap-2 mb-3">
@@ -44,7 +44,7 @@ export const JobOpeningCard: React.FC<JobOpeningCardProps> = ({
 
         <button
           onClick={onApply}
-          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[var(--primary)] hover:bg-[var(--secondary)] text-[var(--white)] text-xs font-bold transition-all duration-300 shadow-md group-hover:scale-105"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[var(--primary)] hover:bg-[var(--secondary)] text-[var(--white)] text-xs font-bold transition-all duration-300  group-hover:scale-105"
         >
           <span>Apply</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -55,4 +55,3 @@ export const JobOpeningCard: React.FC<JobOpeningCardProps> = ({
 };
 
 export default JobOpeningCard;
-

@@ -11,7 +11,7 @@ export function AuditsSection() {
       <div className="ratio relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
             <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
             <span className="font-mono uppercase text-[11px] sm:text-xs">
               QUALITY CONTROL
@@ -28,7 +28,7 @@ export function AuditsSection() {
         </div>
 
         {/* Content Container */}
-        <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20  grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Side: 13 Audit Items Grid */}
           <div className="lg:col-span-7 space-y-4">
             <div className="flex items-center gap-2 mb-2">
@@ -55,7 +55,7 @@ export function AuditsSection() {
 
           {/* Right Side: Audit Imagery */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[var(--primary)]/15 shadow-lg group">
+            <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[var(--primary)]/15  group">
               <Image
                 src="/hero_interior.png"
                 alt="Audit Review Team"
@@ -73,7 +73,7 @@ export function AuditsSection() {
               </div>
             </div>
 
-            <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[var(--primary)]/15 shadow-lg group">
+            <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[var(--primary)]/15  group">
               <Image
                 src="/why_excellence.png"
                 alt="Management Compliance Review"
@@ -98,4 +98,3 @@ export function AuditsSection() {
 }
 
 export default AuditsSection;
-

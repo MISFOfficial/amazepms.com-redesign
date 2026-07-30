@@ -33,7 +33,7 @@ export const HeroAccordionCard: React.FC<HeroAccordionCardProps> = ({
       onMouseEnter={onHover}
       className={`relative overflow-hidden cursor-pointer transition-all duration-500 border border-[var(--primary)]/20 bg-[var(--black)] rounded-xl group ${
         isExpanded
-          ? "flex-[3.5] sm:flex-[4] shadow-xl"
+          ? "flex-[3.5] sm:flex-[4] "
           : "flex-1 opacity-90 hover:opacity-100"
       }`}
     >
@@ -116,4 +116,3 @@ export const HeroAccordionCard: React.FC<HeroAccordionCardProps> = ({
 };
 
 export default HeroAccordionCard;
-

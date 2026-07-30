@@ -55,7 +55,7 @@ export const StrengthCard: React.FC<StrengthCardProps> = ({ item }) => {
   };
 
   return (
-    <div className="strength-card group relative bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full overflow-hidden text-[var(--black)]">
+    <div className="strength-card group relative bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 flex flex-col justify-between h-full overflow-hidden text-[var(--black)]">
       <div>
         {/* Card Header */}
         <div className="flex items-center justify-between gap-3 mb-4">
@@ -86,4 +86,3 @@ export const StrengthCard: React.FC<StrengthCardProps> = ({ item }) => {
 };
 
 export default StrengthCard;
-

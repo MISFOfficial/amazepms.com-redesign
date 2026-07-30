@@ -10,7 +10,7 @@ export const CallInfo: React.FC = () => {
       className="flex items-center gap-3.5 group cursor-pointer shrink-0"
     >
       {/* Phone Icon Circle */}
-      <div className="w-12 h-12 rounded-full bg-[var(--secondary)] text-[var(--white)] flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-md">
+      <div className="w-12 h-12 rounded-full bg-[var(--secondary)] text-[var(--white)] flex items-center justify-center group-hover:scale-110 transition-all duration-300 ">
         <PhoneCall className="w-5 h-5 text-[var(--white)]" />
       </div>
 
@@ -28,4 +28,3 @@ export const CallInfo: React.FC = () => {
 };
 
 export default CallInfo;
-

@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import HeroIntro from "./components/HeroIntro";
-import HeroStats from "./components/HeroStats";
 import HeroAccordionCard, { HeroSlide } from "./components/HeroAccordionCard";
 import { heroSlides } from "./components/Content";
 
@@ -16,7 +15,6 @@ export function HeroSections() {
           {/* Left Hero Text Section & Stats */}
           <div className="lg:col-span-5 space-y-6">
             <HeroIntro />
-            <HeroStats />
           </div>
 
           {/* Right Interactive Gallery Accordion */}
@@ -38,4 +36,3 @@ export function HeroSections() {
 }
 
 export default HeroSections;
-

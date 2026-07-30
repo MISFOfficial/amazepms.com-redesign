@@ -31,7 +31,7 @@ export function FunctionalApproach() {
             trigger: containerRef.current,
             start: "top 80%",
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -43,7 +43,7 @@ export function FunctionalApproach() {
       <div className="ratio relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
             <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
             <span className="font-mono uppercase text-[11px] sm:text-xs">
               EXECUTION FRAMEWORK
@@ -51,10 +51,7 @@ export function FunctionalApproach() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
-            Functional{" "}
-            <span className="text-[var(--secondary)]">
-              Approach
-            </span>
+            Functional <span className="text-[var(--secondary)]">Approach</span>
           </h2>
         </div>
 
@@ -71,7 +68,7 @@ export function FunctionalApproach() {
           </div>
 
           {/* Right: Skyscraper Graphic Image */}
-          <div className="lg:col-span-4 relative h-[450px] sm:h-[550px] rounded-3xl overflow-hidden border border-[var(--primary)]/20 shadow-xl group">
+          <div className="lg:col-span-4 relative h-[450px] sm:h-[550px] rounded-3xl overflow-hidden border border-[var(--primary)]/20  group">
             <Image
               src="/hero_building.png"
               alt="High-Rise Skyscraper Architecture"
@@ -96,4 +93,3 @@ export function FunctionalApproach() {
 }
 
 export default FunctionalApproach;
-

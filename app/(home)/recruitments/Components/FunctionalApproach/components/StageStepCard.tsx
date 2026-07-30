@@ -11,10 +11,10 @@ interface StageStepCardProps {
 
 export const StageStepCard: React.FC<StageStepCardProps> = ({ stage }) => {
   return (
-    <div className="stage-step-card relative bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 overflow-hidden group text-[var(--black)]">
+    <div className="stage-step-card relative bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20  hover:border-[var(--secondary)] hover: transition-all duration-500 overflow-hidden group text-[var(--black)]">
       {/* Stage Badge & Number */}
       <div className="flex items-center justify-between mb-4">
-        <span className="px-3 py-1 rounded-full bg-[var(--primary)] text-[var(--white)] text-xs font-mono font-bold uppercase tracking-wider shadow-md">
+        <span className="px-3 py-1 rounded-full bg-[var(--primary)] text-[var(--white)] text-xs font-mono font-bold uppercase tracking-wider ">
           {stage.stageBadge}
         </span>
         <span className="text-xs font-mono font-extrabold text-[var(--secondary)]">
@@ -43,4 +43,3 @@ export const StageStepCard: React.FC<StageStepCardProps> = ({ stage }) => {
 };
 
 export default StageStepCard;
-
