@@ -112,7 +112,7 @@ export const WhyCardStack: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="why-section-wrapper w-full bg-[var(--white)] min-h-screen flex flex-col justify-center py-8 lg:py-10"
+      className="why-section-wrapper w-full min-h-screen flex flex-col justify-center py-8 lg:py-10"
     >
       {/* Header Section */}
       <div className="pb-4 sm:pb-6 px-4">
@@ -120,7 +120,7 @@ export const WhyCardStack: React.FC = () => {
       </div>
 
       {/* GSAP Cards Container */}
-      <div className="why-cards-container flex flex-col gap-6 lg:gap-0 lg:relative lg:w-full lg:h-[480px] lg:overflow-hidden lg:bg-[var(--white)] lg:items-center lg:justify-center ">
+      <div className="why-cards-container flex flex-col gap-6 lg:gap-0 lg:relative lg:w-full lg:h-[480px] lg:overflow-hidden items-center lg:justify-center ">
         {whyPillarsData.map((pillar, idx) => {
           const theme = cardThemes[idx % cardThemes.length];
           return (
