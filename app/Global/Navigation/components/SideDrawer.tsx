@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Search, Phone, Mail, ArrowUpRight } from "lucide-react";
+import { X, Phone, Mail, ArrowUpRight } from "lucide-react";
 import { Nav, NavItem, EmergencyContact } from "../Nav";
 
 interface SideDrawerProps {
@@ -14,7 +14,7 @@ interface SideDrawerProps {
 
 export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
   const pathname = usePathname();
-  const [drawerSearch, setDrawerSearch] = useState("");
+  const [drawerSearch] = useState("");
 
   const filteredNav = Nav.filter(
     (item) =>
@@ -42,7 +42,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 30, stiffness: 300 }}
+            transition={{ duration: 0.2 }}
             className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-[var(--white)] border-l border-[var(--primary)]/20 z-50 flex flex-col justify-between overflow-hidden "
           >
             {/* Drawer Header */}

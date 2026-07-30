@@ -14,12 +14,12 @@ export function Navigation() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full primary-rounded">
+    <header className="sticky top-0 z-40 w-full ">
       {/* Top Helpline Utility Bar */}
       <TopInfoBar />
 
       {/* Main Flat Light Navigation Bar */}
-      <div className="bg-[var(--white)] border-b border-[var(--primary)]/10 py-3 primary-rounded">
+      <div className="bg-[var(--white)] border-b border-[var(--primary)]/10 py-3 ">
         <div className="ratio flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <Logo />
