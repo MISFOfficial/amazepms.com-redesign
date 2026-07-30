@@ -32,7 +32,7 @@ export function ClientsDistribution() {
             trigger: containerRef.current,
             start: "top 80%",
           },
-        }
+        },
       );
     }, containerRef);
 
@@ -43,7 +43,7 @@ export function ClientsDistribution() {
     .map((cat) => ({
       ...cat,
       clients: cat.clients.filter((c) =>
-        c.toLowerCase().includes(searchQuery.toLowerCase())
+        c.toLowerCase().includes(searchQuery.toLowerCase()),
       ),
     }))
     .filter((cat) => cat.clients.length > 0);
@@ -71,7 +71,8 @@ export function ClientsDistribution() {
           </h2>
 
           <p className="text-xs sm:text-sm text-slate-300 font-sans max-w-xl mx-auto leading-relaxed">
-            Trusted by over 100+ prestigious commercial parks, residential communities, healthcare networks, and industrial complexes.
+            Trusted by over 100+ prestigious commercial parks, residential
+            communities, healthcare networks, and industrial complexes.
           </p>
         </div>
 
