@@ -53,13 +53,6 @@ export function ClientsDistribution() {
       <div className="ratio relative z-10 space-y-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full ">
-            <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
-            <span className="font-mono uppercase text-[11px] sm:text-xs">
-              ESTEEMED CLIENTELE
-            </span>
-          </div>
-
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
             Client{" "}
             <span className="text-[var(--secondary)]">Directory & Sectors</span>
@@ -94,7 +87,7 @@ export function ClientsDistribution() {
         </div>
 
         {/* Sector Share Pie Chart Visual */}
-        <div className="max-w-4xl mx-auto pt-8">
+        <div className="ratio pt-8">
           <SectorPieChart />
         </div>
       </div>

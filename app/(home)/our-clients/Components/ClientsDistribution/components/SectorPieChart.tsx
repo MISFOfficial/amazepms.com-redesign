@@ -50,7 +50,7 @@ export const SectorPieChart: React.FC = () => {
   ];
 
   return (
-    <div className="bg-[var(--white)] primary-rounded p-6 sm:p-8 border border-[var(--primary)]/20  space-y-6 text-[var(--black)]">
+    <div className="bg-[var(--white)] primary-rounded p-6 sm:p-8 border border-[var(--primary)]/20 space-y-6 text-[var(--black)]">
       {/* Header */}
       <div className="flex items-center gap-3 pb-4 border-b border-[var(--primary)]/15">
         <PieIcon className="w-6 h-6 text-[var(--secondary)]" />
@@ -163,11 +163,13 @@ export const SectorPieChart: React.FC = () => {
         </div>
 
         {/* Legend Grid */}
-        <div className="space-y-2.5 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
           {sectors.map((sec, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-between p-2.5 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15"
+              className={`flex items-center justify-between p-2.5 primary-rounded bg-[var(--primary)]/5 border border-[var(--primary)]/15 ${
+                idx === sectors.length - 1 ? "sm:col-span-2" : ""
+              }`}
             >
               <div className="flex items-center gap-2.5">
                 <span

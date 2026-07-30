@@ -1,8 +1,8 @@
 import React from "react";
 import HeroSection from "./Components/HeroSection/HeroSection";
 import ClientsDistribution from "./Components/ClientsDistribution/ClientsDistribution";
-import ClientLogos from "./Components/ClientLogos/ClientLogos";
 import CallBanner from "../Components/CallBanner/CallBanner";
+import Partners from "../Components/Partners/Partners";
 
 export const metadata = {
   title: "Our Clients | Amaze PMS",
@@ -20,7 +20,7 @@ function page() {
       <ClientsDistribution />
 
       {/* 3. Trusted Client Logos Showcase */}
-      <ClientLogos />
+      <Partners />
 
       {/* 4. Contact Banner CTA */}
       <CallBanner />
