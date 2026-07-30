@@ -12,40 +12,40 @@ export const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
   const getIcon = () => {
     switch (card.id) {
       case "training":
-        return <GraduationCap className="w-6 h-6 text-cyan-400" />;
+        return <GraduationCap className="w-6 h-6 text-[var(--secondary)]" />;
       case "security":
-        return <ShieldCheck className="w-6 h-6 text-cyan-400" />;
+        return <ShieldCheck className="w-6 h-6 text-[var(--secondary)]" />;
       case "mep":
-        return <Wrench className="w-6 h-6 text-cyan-400" />;
+        return <Wrench className="w-6 h-6 text-[var(--secondary)]" />;
       default:
-        return <Sparkles className="w-6 h-6 text-cyan-400" />;
+        return <Sparkles className="w-6 h-6 text-[var(--secondary)]" />;
     }
   };
 
   return (
-    <div className="skill-dev-card bg-[#071330] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-blue-900/40 shadow-2xl hover:border-cyan-500/50 transition-all duration-500 flex flex-col justify-between h-full group">
+    <div className="skill-dev-card bg-[var(--white)] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 flex flex-col justify-between h-full group text-[var(--black)]">
       <div>
         {/* Card Header */}
         <div className="flex items-center justify-between mb-4">
-          <div className="w-12 h-12 rounded-2xl bg-blue-950/80 border border-cyan-500/30 flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
+          <div className="w-12 h-12 rounded-2xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-300">
             {getIcon()}
           </div>
-          <span className="text-[10px] font-mono font-bold text-cyan-300 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-blue-950 border border-cyan-500/30">
+          <span className="text-[10px] font-mono font-bold text-[var(--primary)] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/20">
             {card.badge}
           </span>
         </div>
 
         {/* Title */}
-        <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight mb-4 group-hover:text-cyan-300 transition-colors">
+        <h3 className="text-xl sm:text-2xl font-bold text-[var(--primary)] tracking-tight mb-4 group-hover:text-[var(--secondary)] transition-colors">
           {card.title}
         </h3>
 
-        {/* Items Checklist matching Screenshot */}
-        <div className="space-y-2.5 pt-4 border-t border-white/10">
+        {/* Items Checklist */}
+        <div className="space-y-2.5 pt-4 border-t border-[var(--primary)]/15">
           {card.items.map((item, idx) => (
             <div key={idx} className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-              <span className="text-xs sm:text-sm text-slate-300 font-medium leading-tight">
+              <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0 mt-0.5" />
+              <span className="text-xs sm:text-sm text-[var(--black)]/80 font-medium leading-tight">
                 {item}
               </span>
             </div>
@@ -57,3 +57,4 @@ export const SkillCard: React.FC<SkillCardProps> = ({ card }) => {
 };
 
 export default SkillCard;
+
