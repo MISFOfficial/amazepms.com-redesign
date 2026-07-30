@@ -34,16 +34,16 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
   return (
     <div
       ref={containerRef}
-      className="relative hidden md:block w-48 xl:w-56 primary-rounded "
+      className="relative hidden md:block w-48 xl:w-56 primary-rounded"
     >
       <div
-        className={`flex items-center gap-2 bg-(--white) border ${
+        className={`flex items-center gap-2 bg-[var(--white)] border ${
           isFocused
-            ? "border-slate-900 ring-1 ring-slate-900"
-            : "border-slate-300 hover:border-slate-400"
-        } primary-rounded px-3 py-1.5 transition-all `}
+            ? "border-[var(--secondary)] ring-1 ring-[var(--secondary)]"
+            : "border-[var(--primary)]/20 hover:border-[var(--secondary)]/50"
+        } primary-rounded px-3 py-1.5 transition-all`}
       >
-        <Search className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+        <Search className="w-3.5 h-3.5 text-[var(--black)]/50 shrink-0" />
 
         <input
           type="text"
@@ -51,18 +51,18 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder="Search..."
-          className="w-full bg-transparent text-xs text-(--black) placeholder-slate-400 focus:outline-none font-medium primary-rounded"
+          className="w-full bg-transparent text-xs text-[var(--black)] placeholder-[var(--black)]/40 focus:outline-none font-medium primary-rounded"
         />
 
         {query ? (
           <button
             onClick={() => setQuery("")}
-            className="text-slate-400 hover:text-slate-600 p-0.5 primary-rounded"
+            className="text-[var(--black)]/40 hover:text-[var(--primary)] p-0.5 primary-rounded"
           >
             <X className="w-3.5 h-3.5" />
           </button>
         ) : (
-          <span className="text-[10px] font-mono text-slate-400 bg-slate-100 border border-slate-200 px-1 py-0.5 primary-rounded">
+          <span className="text-[10px] font-mono text-[var(--black)]/50 bg-[var(--primary)]/5 border border-[var(--primary)]/15 px-1 py-0.5 primary-rounded">
             /
           </span>
         )}

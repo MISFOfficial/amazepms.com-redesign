@@ -16,15 +16,15 @@ export const HamburgerButton: React.FC<HamburgerButtonProps> = ({
     <button
       onClick={onToggle}
       aria-label={isOpen ? "Close menu" : "Open menu"}
-      className="flex items-center gap-2 px-3 py-2 bg-(--primary) text-(--white) hover:bg-(--secondary)  transition-colors focus:outline-none cursor-pointer primary-rounded "
+      className="flex items-center gap-2 px-3 py-2 bg-[var(--primary)] text-[var(--white)] hover:bg-[var(--secondary)] transition-colors focus:outline-none cursor-pointer primary-rounded"
     >
       <span className="text-xs font-mono uppercase tracking-wider hidden sm:inline-block">
         {isOpen ? "Close" : "Menu"}
       </span>
       {isOpen ? (
-        <X className="w-4 h-4 text-(--white)" />
+        <X className="w-4 h-4 text-[var(--white)]" />
       ) : (
-        <Menu className="w-4 h-4 text-(--white)" />
+        <Menu className="w-4 h-4 text-[var(--white)]" />
       )}
     </button>
   );

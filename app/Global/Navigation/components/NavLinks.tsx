@@ -19,16 +19,16 @@ export const NavLinks: React.FC = () => {
           <Link
             key={item.title}
             href={item.href}
-            className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-all primary-rounded  border ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-all primary-rounded border ${
               isActive
-                ? "bg-(--black) text-(--white) border-slate-900"
-                : "text-slate-700 hover:text-slate-900 hover:bg-slate-100 border-transparent hover:border-slate-300"
+                ? "bg-[var(--primary)] text-[var(--white)] border-[var(--primary)]"
+                : "text-[var(--black)]/80 hover:text-[var(--primary)] hover:bg-[var(--primary)]/10 border-transparent hover:border-[var(--primary)]/20"
             }`}
           >
             <span>{item.title}</span>
 
             {item.badge && (
-              <span className="text-[9px] font-extrabold px-1 py-0.2 bg-amber-400 text-slate-950 uppercase primary-rounded border border-amber-500">
+              <span className="text-[9px] font-extrabold px-1.5 py-0.5 bg-[var(--secondary)] text-[var(--white)] uppercase primary-rounded">
                 {item.badge}
               </span>
             )}

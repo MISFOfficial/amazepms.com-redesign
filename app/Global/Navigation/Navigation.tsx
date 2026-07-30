@@ -14,17 +14,15 @@ export function Navigation() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full primary-rounded ">
+    <header className="sticky top-0 z-40 w-full primary-rounded">
       {/* Top Helpline Utility Bar */}
       <TopInfoBar />
 
       {/* Main Flat Light Navigation Bar */}
-      <div className="bg-(--white) border-b border-(--black)/10 py-3 primary-rounded ">
+      <div className="bg-[var(--white)] border-b border-[var(--primary)]/10 py-3 primary-rounded">
         <div className="ratio flex items-center justify-between gap-4">
           {/* Brand Logo */}
           <Logo />
-
-          {/* Nav Links (Desktop) */}
 
           {/* Search, CTA & Hamburger Drawer Toggle */}
           <div className="flex items-center gap-2.5">
@@ -34,10 +32,10 @@ export function Navigation() {
             {/* Flat Action Pill/Box Button */}
             <Link
               href="/contact"
-              className="hidden xl:flex items-center gap-1 text-(--secondary) border border-(--secondary) hover:bg-(--secondary) hover:text-(--white) text-xs font-bold uppercase tracking-wider px-3.5 py-2 transition-colors primary-rounded "
+              className="hidden xl:flex items-center gap-1 text-[var(--secondary)] border border-[var(--secondary)] hover:bg-[var(--secondary)] hover:text-[var(--white)] text-xs font-bold uppercase tracking-wider px-3.5 py-2 transition-colors primary-rounded"
             >
               <span>Get Quote</span>
-              <ArrowUpRight className="w-3.5 h-3.5 " />
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
 
             {/* Square Hamburger Menu Button */}

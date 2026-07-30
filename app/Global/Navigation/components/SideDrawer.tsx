@@ -34,31 +34,31 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={onClose}
-            className="fixed inset-0 bg-slate-950/40 z-50 cursor-pointer primary-rounded "
+            className="fixed inset-0 bg-[var(--black)]/40 z-50 cursor-pointer "
           />
 
-          {/* Flat Side Drawer - NO ROUNDED, NO SHADOW */}
+          {/* Flat Side Drawer */}
           <motion.aside
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-(--white) border-l border-slate-300 z-50 flex flex-col justify-between overflow-hidden primary-rounded "
+            className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-[var(--white)] border-l border-[var(--primary)]/20 z-50 flex flex-col justify-between overflow-hidden "
           >
             {/* Drawer Header */}
-            <div className="p-6 border-b border-slate-200 flex items-center justify-between bg-slate-50 primary-rounded ">
+            <div className="p-6 border-b border-[var(--primary)]/15 flex items-center justify-between bg-[var(--primary)]/5 primary-rounded">
               <div className="flex flex-col">
-                <span className="text-xs font-mono font-bold tracking-widest text-slate-500 uppercase">
+                <span className="text-xs font-mono font-bold tracking-widest text-[var(--primary)] uppercase">
                   MENU NAVIGATION
                 </span>
-                <span className="text-[10px] font-semibold text-slate-400">
+                <span className="text-[10px] font-semibold text-[var(--secondary)]">
                   AMAZE PROPERTY MANAGEMENT
                 </span>
               </div>
 
               <button
                 onClick={onClose}
-                className="w-8 h-8 bg-(--black) text-(--white) hover:bg-slate-800 flex items-center justify-center transition-colors cursor-pointer primary-rounded  border border-slate-900"
+                className="w-8 h-8 bg-[var(--primary)] text-[var(--white)] hover:bg-[var(--secondary)] flex items-center justify-center transition-colors cursor-pointer primary-rounded border border-[var(--primary)]/20"
                 aria-label="Close menu"
               >
                 <X className="w-4 h-4" />
@@ -67,18 +67,6 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
 
             {/* Scrollable Main Content */}
             <div className="flex-1 overflow-y-auto custom-scrollbar p-6 space-y-6">
-              {/* In-drawer Search input */}
-              <div className="relative">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
-                <input
-                  type="text"
-                  value={drawerSearch}
-                  onChange={(e) => setDrawerSearch(e.target.value)}
-                  placeholder="Search menu..."
-                  className="w-full bg-(--white) text-sm text-(--black) placeholder-slate-400 border border-slate-300 focus:border-slate-900 primary-rounded pl-9 pr-4 py-2 outline-none font-medium transition-all "
-                />
-              </div>
-
               {/* Nav.ts items list */}
               <nav className="space-y-1">
                 {filteredNav.map((item: NavItem) => {
@@ -91,10 +79,10 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                       key={item.title}
                       href={item.href}
                       onClick={onClose}
-                      className={`flex items-center justify-between p-3 transition-colors primary-rounded  ${
+                      className={`flex items-center justify-between p-3 transition-colors primary-rounded ${
                         isActive
-                          ? "bg-(--primary) text-(--white)  font-bold"
-                          : "bg-(--white) text-(--black)   font-semibold"
+                          ? "bg-[var(--primary)] text-[var(--white)] font-bold"
+                          : "bg-[var(--white)] text-[var(--black)]/85 hover:bg-[var(--primary)]/5 font-semibold"
                       }`}
                     >
                       <div className="flex items-center gap-2">
@@ -103,10 +91,10 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                         </span>
                         {item.badge && (
                           <span
-                            className={`text-[9px] font-extrabold px-1.5 py-0.2 uppercase primary-rounded border ${
+                            className={`text-[9px] font-extrabold px-1.5 py-0.5 uppercase primary-rounded border ${
                               isActive
-                                ? "bg-amber-400 text-slate-950 border-amber-500"
-                                : "bg-blue-100 text-blue-800 border-blue-200"
+                                ? "bg-[var(--secondary)] text-[var(--white)] border-[var(--secondary)]"
+                                : "bg-[var(--primary)]/10 text-[var(--primary)] border-[var(--primary)]/20"
                             }`}
                           >
                             {item.badge}
@@ -115,7 +103,9 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                       </div>
                       <ArrowUpRight
                         className={`w-4 h-4 ${
-                          isActive ? "text-(--white)" : "text-slate-400"
+                          isActive
+                            ? "text-[var(--white)]"
+                            : "text-[var(--black)]/40"
                         }`}
                       />
                     </Link>
@@ -124,17 +114,17 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
               </nav>
 
               {/* Flat Contact Card */}
-              <div className="p-4 bg-(--black) text-(--white) border border-slate-800 primary-rounded  space-y-2">
-                <span className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider block">
+              <div className="p-4 bg-[var(--primary)] text-[var(--white)] border border-[var(--primary)]/20 primary-rounded space-y-2">
+                <span className="text-[11px] font-mono font-bold text-[var(--secondary)] uppercase tracking-wider block">
                   24/7 Service Support
                 </span>
-                <div className="space-y-1 text-xs text-slate-300 font-medium">
+                <div className="space-y-1 text-xs text-[var(--white)]/90 font-medium">
                   <div className="flex items-center gap-2">
-                    <Phone className="w-3.5 h-3.5 text-blue-400" />
+                    <Phone className="w-3.5 h-3.5 text-[var(--secondary)]" />
                     <span>{EmergencyContact.displayPhone}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Mail className="w-3.5 h-3.5 text-blue-400" />
+                    <Mail className="w-3.5 h-3.5 text-[var(--secondary)]" />
                     <span>{EmergencyContact.email}</span>
                   </div>
                 </div>
@@ -142,11 +132,11 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Drawer Footer CTA */}
-            <div className="p-4 border-t border-slate-200 bg-slate-50 flex flex-col gap-2 primary-rounded ">
+            <div className="p-4 border-t border-[var(--primary)]/15 bg-[var(--primary)]/5 flex flex-col gap-2 primary-rounded">
               <Link
                 href="/contact"
                 onClick={onClose}
-                className="w-full py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-(--white) text-xs font-bold uppercase tracking-wider text-center transition-colors primary-rounded  border border-blue-600"
+                className="w-full py-2.5 px-4 bg-[var(--primary)] hover:bg-[var(--secondary)] text-[var(--white)] text-xs font-bold uppercase tracking-wider text-center transition-colors primary-rounded border border-[var(--primary)]/20"
               >
                 Request Service Quote
               </Link>
