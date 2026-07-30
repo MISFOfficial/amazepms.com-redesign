@@ -9,7 +9,7 @@ export const CallButton: React.FC = () => {
     <div className="space-y-3 pt-2">
       <Link
         href="/contact"
-        className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 primary-rounded bg-[var(--secondary)] text-xs sm:text-sm font-bold tracking-wider text-[var(--white)] uppercase hover:bg-[var(--white)] hover:text-[var(--primary)] transition-all duration-300 group shadow-md"
+        className="w-full inline-flex items-center justify-center gap-2.5 px-6 py-3.5 primary-rounded bg-[var(--secondary)] text-xs sm:text-sm font-bold tracking-wider text-[var(--white)] uppercase hover:bg-[var(--white)] hover:text-[var(--primary)] transition-all duration-300 group "
       >
         <span>Request Free Consultation</span>
         <ArrowRight className="w-4 h-4 text-[var(--white)] group-hover:text-[var(--primary)] group-hover:translate-x-1 transition-all duration-300" />
@@ -24,5 +24,3 @@ export const CallButton: React.FC = () => {
 };
 
 export default CallButton;
-
-

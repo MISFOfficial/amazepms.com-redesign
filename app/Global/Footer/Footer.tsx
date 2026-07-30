@@ -24,7 +24,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-(--black) text-slate-300 border-t border-slate-800 relative">
+    <footer className="bg-[var(--primary)] text-[var(--white)]  relative">
       {/* 1. Service Consultation CTA Banner */}
       <FooterCTA />
 

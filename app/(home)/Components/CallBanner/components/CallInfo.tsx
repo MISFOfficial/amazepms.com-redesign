@@ -15,7 +15,7 @@ export const CallInfo: React.FC = () => {
         href="tel:9100694137"
         className="flex items-center gap-4 p-4 primary-rounded bg-[var(--white)]/10 border border-[var(--white)]/20 hover:bg-[var(--white)]/20 transition-all duration-300 group"
       >
-        <div className="w-12 h-12 primary-rounded bg-[var(--secondary)] text-[var(--white)] flex items-center justify-center group-hover:scale-110 transition-transform shrink-0 shadow-md">
+        <div className="w-12 h-12 primary-rounded bg-[var(--secondary)] text-[var(--white)] flex items-center justify-center group-hover:scale-110 transition-transform shrink-0 ">
           <PhoneCall className="w-6 h-6 text-[var(--white)]" />
         </div>
 
@@ -33,5 +33,3 @@ export const CallInfo: React.FC = () => {
 };
 
 export default CallInfo;
-
-

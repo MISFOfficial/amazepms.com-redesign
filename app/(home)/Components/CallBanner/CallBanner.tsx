@@ -17,7 +17,7 @@ export function CallBanner() {
           </div>
 
           {/* Right Column: Direct Contact & Action Box */}
-          <div className="lg:col-span-5 bg-[var(--black)] p-6 sm:p-8 primary-rounded text-[var(--white)] shadow-xl space-y-6 relative overflow-hidden">
+          <div className="lg:col-span-5 bg-[var(--black)] p-6 sm:p-8 primary-rounded text-[var(--white)]  space-y-6 relative overflow-hidden">
             {/* Background Glow Overlay */}
             <div className="absolute -right-10 -bottom-10 w-40 h-40 rounded-full bg-[var(--secondary)]/20 blur-xl pointer-events-none" />
 
