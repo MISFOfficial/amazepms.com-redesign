@@ -11,7 +11,6 @@ import {
   ChevronRight,
 } from "lucide-react";
 import PropertyPattern from "@/app/Global/Patterns/PropertyPattern";
-import Navigation from "./Global/Navigation/Navigation";
 import Footer from "./Global/Footer/Footer";
 
 export const metadata = {
