@@ -6,12 +6,12 @@ import MissionScalingStack from "./components/MissionScalingStack";
 
 export function Mission() {
   return (
-    <section className="relative w-full bg-slate-50 py-16 sm:py-24 border-b border-slate-200 overflow-hidden">
+    <section className="relative w-full bg-[var(--white)] py-16 sm:py-24 border-b border-[var(--primary)]/10 overflow-hidden">
       <div className="ratio">
         {/* Section Header */}
         <MissionHeader />
 
-        {/* GSAP Scaling Cards & Constellation Container */}
+        {/* GSAP Scaling Cards Container */}
         <MissionScalingStack />
       </div>
     </section>
@@ -19,3 +19,4 @@ export function Mission() {
 }
 
 export default Mission;
+

@@ -96,7 +96,8 @@ export const RailwayTrack: React.FC = () => {
             y1="0"
             x2="8"
             y2="1000"
-            stroke="#1e293b"
+            stroke="var(--primary)"
+            strokeOpacity="0.2"
             strokeWidth="3"
             strokeDasharray="4 4"
           />
@@ -105,7 +106,8 @@ export const RailwayTrack: React.FC = () => {
             y1="0"
             x2="32"
             y2="1000"
-            stroke="#1e293b"
+            stroke="var(--primary)"
+            strokeOpacity="0.2"
             strokeWidth="3"
             strokeDasharray="4 4"
           />
@@ -114,7 +116,7 @@ export const RailwayTrack: React.FC = () => {
           <path
             ref={trackLineRef}
             d="M 20 0 L 20 1000"
-            stroke="url(#railway-cyan-gradient)"
+            stroke="var(--secondary)"
             strokeWidth="4"
             strokeLinecap="round"
           />
@@ -125,26 +127,11 @@ export const RailwayTrack: React.FC = () => {
             cx="20"
             cy="0"
             r="8"
-            fill="#06b6d4"
-            stroke="#ffffff"
+            fill="var(--secondary)"
+            stroke="var(--white)"
             strokeWidth="2"
-            className="shadow-lg filter drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]"
+            className="shadow-lg"
           />
-
-          {/* SVG Gradient Definition */}
-          <defs>
-            <linearGradient
-              id="railway-cyan-gradient"
-              x1="0"
-              y1="0"
-              x2="0"
-              y2="1"
-            >
-              <stop offset="0%" stopColor="#2563eb" />
-              <stop offset="50%" stopColor="#06b6d4" />
-              <stop offset="100%" stopColor="#6366f1" />
-            </linearGradient>
-          </defs>
         </svg>
       </div>
 
@@ -159,3 +146,4 @@ export const RailwayTrack: React.FC = () => {
 };
 
 export default RailwayTrack;
+
