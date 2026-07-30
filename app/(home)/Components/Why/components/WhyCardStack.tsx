@@ -17,34 +17,34 @@ import WhyHeader from "./WhyHeader";
 export const WhyCardStack: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  // Card themes & styling
+  // Card themes & styling strictly using CSS variables from globals.css
   const cardThemes = [
     {
-      bg: "bg-[#0a1532] text-white border-blue-900/50 shadow-2xl",
-      accent: "text-cyan-400",
-      badgeBg: "bg-blue-950/80 text-cyan-300 border-blue-700/50",
-      statColor: "text-cyan-400",
+      bg: "bg-[var(--primary)] text-[var(--white)] border-[var(--primary)] shadow-2xl",
+      accent: "text-[var(--secondary)]",
+      badgeBg: "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
+      statColor: "text-[var(--secondary)]",
       cardLabel: "PILLAR 01",
     },
     {
-      bg: "bg-white text-slate-900 border-slate-200 shadow-2xl",
-      accent: "text-blue-600",
-      badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
-      statColor: "text-blue-600",
+      bg: "bg-[var(--white)] text-[var(--black)] border border-[var(--primary)]/20 shadow-2xl",
+      accent: "text-[var(--primary)]",
+      badgeBg: "bg-[var(--primary)]/10 text-[var(--primary)] border-[var(--primary)]/20",
+      statColor: "text-[var(--primary)]",
       cardLabel: "PILLAR 02",
     },
     {
-      bg: "bg-[#111827] text-white border-slate-800 shadow-2xl",
-      accent: "text-indigo-400",
-      badgeBg: "bg-indigo-950/80 text-indigo-300 border-indigo-700/50",
-      statColor: "text-indigo-400",
+      bg: "bg-[var(--black)] text-[var(--white)] border border-[var(--primary)]/40 shadow-2xl",
+      accent: "text-[var(--secondary)]",
+      badgeBg: "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
+      statColor: "text-[var(--secondary)]",
       cardLabel: "PILLAR 03",
     },
     {
-      bg: "bg-gradient-to-br from-blue-950 via-slate-900 to-slate-950 text-white border-blue-800/40 shadow-2xl",
-      accent: "text-blue-400",
-      badgeBg: "bg-blue-950/90 text-blue-300 border-blue-600/50",
-      statColor: "text-blue-400",
+      bg: "bg-gradient-to-br from-[var(--primary)] to-[var(--black)] text-[var(--white)] border border-[var(--primary)]/40 shadow-2xl",
+      accent: "text-[var(--secondary)]",
+      badgeBg: "bg-[var(--white)]/15 text-[var(--white)] border-[var(--white)]/20",
+      statColor: "text-[var(--secondary)]",
       cardLabel: "PILLAR 04",
     },
   ];
@@ -108,17 +108,17 @@ export const WhyCardStack: React.FC = () => {
   return (
     <div
       ref={sectionRef}
-      className="why-section-wrapper w-full bg-slate-50 min-h-screen flex flex-col justify-center py-8 lg:py-10"
+      className="why-section-wrapper w-full bg-[var(--white)] min-h-screen flex flex-col justify-center py-8 lg:py-10"
     >
       {/* Header Section */}
       <div className="pb-4 sm:pb-6 px-4">
         <WhyHeader />
       </div>
 
-      {/* GSAP Cards Container - Column Stacked on Mobile (<1024px), Pinned Sliding on Desktop (>=1024px) */}
-      <div className="why-cards-container flex flex-col gap-6 lg:gap-0 lg:relative lg:w-full lg:h-[480px] lg:overflow-hidden lg:bg-slate-50 lg:items-center lg:justify-center px-4 max-w-4xl mx-auto lg:max-w-none">
-        {/* Background Decorative Ambient Radial Glow */}
-        <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+      {/* GSAP Cards Container */}
+      <div className="why-cards-container flex flex-col gap-6 lg:gap-0 lg:relative lg:w-full lg:h-[480px] lg:overflow-hidden lg:bg-[var(--white)] lg:items-center lg:justify-center px-4 max-w-4xl mx-auto lg:max-w-none">
+        {/* Background Decorative Radial Glow */}
+        <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[var(--primary)]/10 rounded-full blur-3xl pointer-events-none" />
 
         {whyPillarsData.map((pillar, idx) => {
           const theme = cardThemes[idx % cardThemes.length];
@@ -130,7 +130,7 @@ export const WhyCardStack: React.FC = () => {
               style={{ zIndex: idx + 1 }}
             >
               <div
-                className={`w-full max-w-4xl rounded-2xl sm:rounded-[32px] p-5 sm:p-8 lg:p-10 border ${theme.bg} shadow-xl lg:shadow-2xl transition-all duration-300 relative overflow-hidden flex flex-col justify-between my-auto`}
+                className={`w-full max-w-4xl rounded-2xl sm:rounded-[32px] p-5 sm:p-8 lg:p-10 ${theme.bg} shadow-xl lg:shadow-2xl transition-all duration-300 relative overflow-hidden flex flex-col justify-between my-auto`}
               >
                 {/* Card Top Header */}
                 <div>
@@ -149,7 +149,7 @@ export const WhyCardStack: React.FC = () => {
                           >
                             {theme.cardLabel}
                           </span>
-                          <span className="text-xs text-slate-400 font-medium">
+                          <span className="text-xs opacity-70 font-medium">
                             • {pillar.number}/04
                           </span>
                         </div>
@@ -204,3 +204,4 @@ export const WhyCardStack: React.FC = () => {
 };
 
 export default WhyCardStack;
+

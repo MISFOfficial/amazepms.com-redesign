@@ -8,42 +8,42 @@ export const HeroIntro: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Tagline Badge */}
-      <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold rounded-full shadow-xs">
-        <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+        <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
         <span>Integrated Property & Facility Management</span>
       </div>
 
       {/* Headline */}
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-950 leading-[1.15]">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[var(--black)] leading-[1.15]">
         Elevating Property <br />
         Standards Across <br />
-        <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+        <span className="text-[var(--secondary)]">
           South India.
         </span>
       </h1>
 
       {/* Description */}
-      <p className="text-sm text-slate-600 leading-relaxed max-w-lg">
+      <p className="text-sm text-[var(--black)]/80 leading-relaxed max-w-lg font-normal">
         Amaze PMS delivers 360° facility maintenance, security, engineering, and
         staffing solutions for luxury residential complexes & corporate hubs.
       </p>
 
       {/* Bullet Points */}
-      <div className="grid grid-cols-2 gap-3 text-xs font-semibold text-slate-700 pt-1">
+      <div className="grid grid-cols-2 gap-3 text-xs font-semibold text-[var(--black)] pt-1">
         <div className="flex items-center gap-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+          <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
           <span>24/7 Rapid Emergency Response</span>
         </div>
         <div className="flex items-center gap-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+          <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
           <span>ISO Certified Operations</span>
         </div>
         <div className="flex items-center gap-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+          <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
           <span>Verified Technical Staff</span>
         </div>
         <div className="flex items-center gap-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+          <CheckCircle2 className="w-4 h-4 text-[var(--secondary)] shrink-0" />
           <span>Transparent Asset Audits</span>
         </div>
       </div>
@@ -52,7 +52,7 @@ export const HeroIntro: React.FC = () => {
       <div className="flex flex-wrap items-center gap-3 pt-4">
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold uppercase tracking-wider px-6 py-3.5 transition-all shadow-md shadow-blue-600/20"
+          className="inline-flex items-center gap-2 bg-[var(--primary)] hover:bg-[var(--secondary)] text-[var(--white)] text-xs font-bold uppercase tracking-wider px-6 py-3.5 transition-all duration-300 shadow-md rounded-md"
         >
           <span>Get Free Consultation</span>
           <ArrowRight className="w-4 h-4" />
@@ -60,9 +60,9 @@ export const HeroIntro: React.FC = () => {
 
         <a
           href="tel:9100694137"
-          className="inline-flex items-center gap-2 bg-white hover:bg-slate-100 text-slate-800 text-xs font-bold uppercase tracking-wider px-5 py-3.5 transition-colors border border-slate-300 shadow-xs"
+          className="inline-flex items-center gap-2 bg-[var(--white)] hover:bg-[var(--primary)]/10 text-[var(--black)] text-xs font-bold uppercase tracking-wider px-5 py-3.5 transition-colors border border-[var(--primary)]/30 shadow-xs rounded-md"
         >
-          <Phone className="w-3.5 h-3.5 text-blue-600" />
+          <Phone className="w-3.5 h-3.5 text-[var(--secondary)]" />
           <span>Call Helpline</span>
         </a>
       </div>
@@ -71,3 +71,4 @@ export const HeroIntro: React.FC = () => {
 };
 
 export default HeroIntro;
+

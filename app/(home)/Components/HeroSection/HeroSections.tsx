@@ -10,7 +10,7 @@ export function HeroSections() {
   const [activeCard, setActiveCard] = useState<number>(0);
 
   return (
-    <section className="relative w-full bg-slate-50 text-slate-900 overflow-hidden py-12 lg:py-16 border-b border-slate-200">
+    <section className="relative w-full bg-[var(--white)] text-[var(--black)] overflow-hidden py-12 lg:py-16 border-b border-[var(--primary)]/10">
       <div className="ratio relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Left Hero Text Section & Stats */}
@@ -38,3 +38,4 @@ export function HeroSections() {
 }
 
 export default HeroSections;
+

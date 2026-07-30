@@ -7,22 +7,20 @@ import CallButton from "./components/CallButton";
 
 export function CallBanner() {
   return (
-    <section className="py-8 sm:py-12 bg-slate-50 border-b border-slate-200">
+    <section className="py-8 sm:py-12 bg-[var(--white)] border-b border-[var(--primary)]/10">
       <div className="ratio">
-        {/* Main Dark Navy Banner Box matching reference screenshot */}
-        <div className="relative w-full rounded-2xl sm:rounded-3xl bg-[#030e28] p-6 sm:p-8 lg:px-12 lg:py-8 overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
-          {/* Background Left Pill Accent Overlay */}
-          <div className="absolute -left-10 -top-10 w-48 h-48 rounded-full bg-blue-600/10 blur-xl pointer-events-none" />
-          <div className="absolute left-6 top-0 w-24 h-40 bg-white/5 -rotate-45 rounded-full pointer-events-none" />
-          <div className="absolute left-20 top-0 w-24 h-40 bg-white/5 -rotate-45 rounded-full pointer-events-none" />
+        {/* Main Navy Banner Box */}
+        <div className="relative w-full rounded-2xl sm:rounded-3xl bg-[var(--primary)] p-6 sm:p-8 lg:px-12 lg:py-8 overflow-hidden shadow-2xl flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 text-[var(--white)]">
+          {/* Background Left Accent Overlay */}
+          <div className="absolute -left-10 -top-10 w-48 h-48 rounded-full bg-[var(--secondary)]/20 blur-xl pointer-events-none" />
 
-          {/* Background Right Geometric Lattice Overlay matching screenshot */}
+          {/* Background Right Geometric Lattice Overlay */}
           <div className="absolute -right-6 -bottom-6 w-56 h-56 opacity-15 pointer-events-none">
             <svg
               viewBox="0 0 200 200"
               fill="none"
               stroke="currentColor"
-              className="w-full h-full text-cyan-300"
+              className="w-full h-full text-[var(--white)]"
               strokeWidth="1.5"
             >
               <pattern
@@ -56,3 +54,4 @@ export function CallBanner() {
 }
 
 export default CallBanner;
+

@@ -3,20 +3,19 @@
 import React from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
-import { Handshake } from "lucide-react";
 import { partnerLogos } from "./Content";
 
 export function Partners() {
   return (
-    <section className="py-12 bg-white border-b border-slate-200 relative overflow-hidden">
+    <section className="py-12 bg-[var(--white)] border-b border-[var(--primary)]/10 relative overflow-hidden">
       <div className="ratio text-center space-y-3 mb-8">
-        <h2 className="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto">
-          Trusted by 200+ valued partners around the India
+        <h2 className="text-xs sm:text-sm text-[var(--black)]/70 max-w-xl mx-auto font-medium">
+          Trusted by 200+ valued partners around India
         </h2>
       </div>
 
       {/* Infinite Marquee Container */}
-      <div className="relative py-2 bg-slate-50/50 border-y border-slate-100">
+      <div className="relative py-2 bg-[var(--white)] border-y border-[var(--primary)]/10">
         <Marquee
           speed={45}
           pauseOnHover={true}
@@ -26,7 +25,7 @@ export function Partners() {
           {partnerLogos.map((logo) => (
             <div
               key={logo.id}
-              className="mx-4 sm:mx-6 px-6 py-3 bg-white border border-slate-200/80 rounded-lg flex items-center justify-center h-20 w-44 sm:w-52 shadow-xs hover:shadow-md hover:border-blue-400 transition-all duration-300 group cursor-pointer"
+              className="mx-4 sm:mx-6 px-6 py-3 bg-[var(--white)] border border-[var(--primary)]/15 rounded-lg flex items-center justify-center h-20 w-44 sm:w-52 shadow-xs hover:shadow-md hover:border-[var(--secondary)] transition-all duration-300 group cursor-pointer"
             >
               <div className="relative w-full h-12 flex items-center justify-center">
                 <Image
@@ -45,3 +44,4 @@ export function Partners() {
 }
 
 export default Partners;
+
