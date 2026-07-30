@@ -17,7 +17,7 @@ export const whyPillarsData: WhyPillar[] = [
     stat: "20M+",
     statLabel: "Sq.ft Area",
     iconName: "Building2",
-    gradient: "from-blue-600 to-cyan-600",
+    gradient: "from-[var(--primary)] to-[var(--secondary)]",
     points: [
       "Managing an area of more than 20 million Sq.ft across different portfolios",
       "All services are Inhouse",
@@ -31,7 +31,7 @@ export const whyPillarsData: WhyPillar[] = [
     stat: "100%",
     statLabel: "In-House SOPs",
     iconName: "ShieldCheck",
-    gradient: "from-indigo-600 to-blue-600",
+    gradient: "from-[var(--secondary)] to-[var(--primary)]",
     points: [
       "Yearly training calendar will be shared and conducted by Training Officer.",
       "Risk Assessment of Equipment and its Operations and Recommend measures from time to time.",
@@ -45,7 +45,7 @@ export const whyPillarsData: WhyPillar[] = [
     stat: "Cost",
     statLabel: "Optimization",
     iconName: "TrendingUp",
-    gradient: "from-blue-700 to-indigo-700",
+    gradient: "from-[var(--primary)] to-[var(--black)]",
     points: [
       "Internal team will audit the site on a regular basis and propose the site improvement plans. The plan would include Power Saving Methods, Manpower Optimization will help in reducing the cost.",
       "Coordination and Supervision towards Annual Shutdown Maintenance and mobilizing.",
@@ -59,7 +59,7 @@ export const whyPillarsData: WhyPillar[] = [
     stat: "Staff",
     statLabel: "Welfare Care",
     iconName: "Award",
-    gradient: "from-cyan-600 to-blue-600",
+    gradient: "from-[var(--secondary)] to-[var(--primary)]",
     points: [
       "EHS, Security, Technical, Fire & Safety, Inventory, Process, Soft Services, Compliance, Customer Satisfaction audits.",
       "AMC Tracking and Negotiations",
@@ -67,3 +67,4 @@ export const whyPillarsData: WhyPillar[] = [
     ],
   },
 ];
+

@@ -120,10 +120,9 @@ export const WhyCardStack: React.FC = () => {
       </div>
 
       {/* GSAP Cards Container */}
-      <div className="why-cards-container flex flex-col gap-6 lg:gap-0 lg:relative lg:w-full lg:h-[480px] lg:overflow-hidden lg:bg-[var(--white)] lg:items-center lg:justify-center px-4 max-w-4xl mx-auto lg:max-w-none">
+      <div className="why-cards-container flex flex-col gap-6 lg:gap-0 lg:relative lg:w-full lg:h-[480px] lg:overflow-hidden lg:bg-[var(--white)] lg:items-center lg:justify-center ">
         {whyPillarsData.map((pillar, idx) => {
           const theme = cardThemes[idx % cardThemes.length];
-
           return (
             <div
               key={pillar.id}
@@ -161,21 +160,6 @@ export const WhyCardStack: React.FC = () => {
                     </div>
 
                     {/* Stat Badge */}
-                    <div className="flex items-center gap-2 sm:gap-3 px-3 py-1.5 sm:px-4 sm:py-2 primary-rounded sm:primary-rounded bg-black/20 backdrop-blur-md border border-white/10 shrink-0">
-                      <Layers
-                        className={`w-4 h-4 sm:w-5 sm:h-5 ${theme.accent}`}
-                      />
-                      <div className="text-right">
-                        <span
-                          className={`text-lg sm:text-2xl font-mono font-extrabold block leading-none ${theme.statColor}`}
-                        >
-                          {pillar.stat}
-                        </span>
-                        <span className="text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider block mt-0.5 opacity-80">
-                          {pillar.statLabel}
-                        </span>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
