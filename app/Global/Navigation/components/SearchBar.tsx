@@ -34,14 +34,14 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
   return (
     <div
       ref={containerRef}
-      className="relative hidden md:block w-48 xl:w-56 primary-rounded shadow-none"
+      className="relative hidden md:block w-48 xl:w-56 primary-rounded "
     >
       <div
         className={`flex items-center gap-2 bg-(--white) border ${
           isFocused
             ? "border-slate-900 ring-1 ring-slate-900"
             : "border-slate-300 hover:border-slate-400"
-        } primary-rounded px-3 py-1.5 transition-all shadow-none`}
+        } primary-rounded px-3 py-1.5 transition-all `}
       >
         <Search className="w-3.5 h-3.5 text-slate-500 shrink-0" />
 
@@ -70,7 +70,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearchSelect }) => {
 
       {/* Autocomplete Dropdown */}
       {isFocused && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-(--white) border border-slate-300 p-2 z-50 primary-rounded shadow-none">
+        <div className="absolute top-full left-0 right-0 mt-1 bg-(--white) border border-slate-300 p-2 z-50 primary-rounded ">
           <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 px-2 font-mono">
             Navigation Matches
           </div>

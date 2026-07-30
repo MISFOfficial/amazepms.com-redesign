@@ -34,7 +34,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={onClose}
-            className="fixed inset-0 bg-slate-950/40 z-50 cursor-pointer primary-rounded shadow-none"
+            className="fixed inset-0 bg-slate-950/40 z-50 cursor-pointer primary-rounded "
           />
 
           {/* Flat Side Drawer - NO ROUNDED, NO SHADOW */}
@@ -43,10 +43,10 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-(--white) border-l border-slate-300 z-50 flex flex-col justify-between overflow-hidden primary-rounded shadow-none"
+            className="fixed top-0 right-0 bottom-0 w-full max-w-md bg-(--white) border-l border-slate-300 z-50 flex flex-col justify-between overflow-hidden primary-rounded "
           >
             {/* Drawer Header */}
-            <div className="p-6 border-b border-slate-200 flex items-center justify-between bg-slate-50 primary-rounded shadow-none">
+            <div className="p-6 border-b border-slate-200 flex items-center justify-between bg-slate-50 primary-rounded ">
               <div className="flex flex-col">
                 <span className="text-xs font-mono font-bold tracking-widest text-slate-500 uppercase">
                   MENU NAVIGATION
@@ -58,7 +58,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
 
               <button
                 onClick={onClose}
-                className="w-8 h-8 bg-(--black) text-(--white) hover:bg-slate-800 flex items-center justify-center transition-colors cursor-pointer primary-rounded shadow-none border border-slate-900"
+                className="w-8 h-8 bg-(--black) text-(--white) hover:bg-slate-800 flex items-center justify-center transition-colors cursor-pointer primary-rounded  border border-slate-900"
                 aria-label="Close menu"
               >
                 <X className="w-4 h-4" />
@@ -75,7 +75,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                   value={drawerSearch}
                   onChange={(e) => setDrawerSearch(e.target.value)}
                   placeholder="Search menu..."
-                  className="w-full bg-(--white) text-sm text-(--black) placeholder-slate-400 border border-slate-300 focus:border-slate-900 primary-rounded pl-9 pr-4 py-2 outline-none font-medium transition-all shadow-none"
+                  className="w-full bg-(--white) text-sm text-(--black) placeholder-slate-400 border border-slate-300 focus:border-slate-900 primary-rounded pl-9 pr-4 py-2 outline-none font-medium transition-all "
                 />
               </div>
 
@@ -91,7 +91,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
                       key={item.title}
                       href={item.href}
                       onClick={onClose}
-                      className={`flex items-center justify-between p-3 transition-colors primary-rounded shadow-none ${
+                      className={`flex items-center justify-between p-3 transition-colors primary-rounded  ${
                         isActive
                           ? "bg-(--primary) text-(--white)  font-bold"
                           : "bg-(--white) text-(--black)   font-semibold"
@@ -124,7 +124,7 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
               </nav>
 
               {/* Flat Contact Card */}
-              <div className="p-4 bg-(--black) text-(--white) border border-slate-800 primary-rounded shadow-none space-y-2">
+              <div className="p-4 bg-(--black) text-(--white) border border-slate-800 primary-rounded  space-y-2">
                 <span className="text-[11px] font-mono font-bold text-amber-400 uppercase tracking-wider block">
                   24/7 Service Support
                 </span>
@@ -142,11 +142,11 @@ export const SideDrawer: React.FC<SideDrawerProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Drawer Footer CTA */}
-            <div className="p-4 border-t border-slate-200 bg-slate-50 flex flex-col gap-2 primary-rounded shadow-none">
+            <div className="p-4 border-t border-slate-200 bg-slate-50 flex flex-col gap-2 primary-rounded ">
               <Link
                 href="/contact"
                 onClick={onClose}
-                className="w-full py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-(--white) text-xs font-bold uppercase tracking-wider text-center transition-colors primary-rounded shadow-none border border-blue-600"
+                className="w-full py-2.5 px-4 bg-blue-600 hover:bg-blue-700 text-(--white) text-xs font-bold uppercase tracking-wider text-center transition-colors primary-rounded  border border-blue-600"
               >
                 Request Service Quote
               </Link>

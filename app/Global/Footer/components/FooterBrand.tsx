@@ -10,7 +10,7 @@ export const FooterBrand: React.FC = () => {
     <div className="lg:col-span-4 space-y-4">
       <Link
         href="/"
-        className="inline-block bg-[var(--white)] p-2.5 primary-rounded border border-[var(--white)]/20 shadow-sm"
+        className="inline-block bg-[var(--white)] p-2.5 primary-rounded border border-[var(--white)]/20 "
       >
         <Image
           src="/logo.png"
@@ -57,4 +57,3 @@ export const FooterBrand: React.FC = () => {
 };
 
 export default FooterBrand;
-
