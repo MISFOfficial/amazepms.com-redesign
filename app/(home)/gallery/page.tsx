@@ -1,7 +1,7 @@
 import React from "react";
-import HeroSection from "./Components/HeroSection/HeroSection";
 import GalleryGrid from "./Components/GalleryGrid/GalleryGrid";
 import CallBanner from "../Components/CallBanner/CallBanner";
+import PropertyPattern from "@/app/Global/Patterns/PropertyPattern";
 
 export const metadata = {
   title: "Gallery | Amaze PMS Workforce & Operations",
@@ -11,9 +11,8 @@ export const metadata = {
 
 function page() {
   return (
-    <div>
-      {/* 1. Page Banner Hero */}
-      <HeroSection />
+    <div className="relative">
+      <PropertyPattern />
 
       {/* 2. Interactive Media Photo Gallery Grid & Lightbox */}
       <GalleryGrid />
