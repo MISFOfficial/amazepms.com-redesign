@@ -11,7 +11,7 @@ import {
 } from "./components/Content";
 import JobOpeningCard from "./components/JobOpeningCard";
 import ApplicationModal from "./components/ApplicationModal";
-import { Mail, Sparkles, Briefcase, Search } from "lucide-react";
+import { Mail, Sparkles, Briefcase } from "lucide-react";
 
 export function OpeningsList() {
   const [selectedJob, setSelectedJob] = useState<JobOpeningItem | null>(null);
@@ -60,60 +60,57 @@ export function OpeningsList() {
   }, [activeTab]);
 
   return (
-    <section className="relative w-full bg-slate-950 py-16 sm:py-24 border-b border-blue-950/80 overflow-hidden text-white">
-      {/* Background Mesh */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-25 pointer-events-none" />
-
+    <section className="relative w-full bg-[var(--white)] py-16 sm:py-24 border-b border-[var(--primary)]/10 overflow-hidden text-[var(--black)]">
       <div className="ratio relative z-10 space-y-12">
-        {/* Top Header Card Container matching Screenshot */}
-        <div className="bg-[#071330] rounded-3xl p-6 sm:p-10 border border-blue-900/40 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Top Header Card Container */}
+        <div className="bg-[var(--white)] rounded-3xl p-6 sm:p-10 border border-[var(--primary)]/20 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left Text Column */}
           <div className="lg:col-span-7 space-y-4 text-center sm:text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-950/90 border border-cyan-500/30 text-cyan-300 text-xs font-semibold rounded-full shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-cyan-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-xs font-semibold rounded-full shadow-xs">
+              <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
               <span className="font-mono uppercase text-[11px]">
                 {careersHeaderData.badge}
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--black)] tracking-tight leading-tight">
               {careersHeaderData.heading}
             </h2>
 
-            <p className="text-sm sm:text-base font-semibold text-cyan-400 font-sans">
+            <p className="text-sm sm:text-base font-semibold text-[var(--secondary)] font-sans">
               {careersHeaderData.subheading}
             </p>
 
-            <div className="p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+            <div className="p-4 sm:p-5 rounded-2xl bg-[var(--primary)]/5 border border-[var(--primary)]/15 text-xs sm:text-sm text-[var(--black)]/80 leading-relaxed font-sans font-normal">
               {careersHeaderData.introText}{" "}
               <a
                 href={`mailto:${careersHeaderData.email}`}
-                className="text-cyan-300 font-bold underline hover:text-white transition-colors inline-flex items-center gap-1.5"
+                className="text-[var(--secondary)] font-bold underline hover:text-[var(--primary)] transition-colors inline-flex items-center gap-1.5"
               >
-                <Mail className="w-4 h-4 text-cyan-400" />
+                <Mail className="w-4 h-4 text-[var(--secondary)]" />
                 <span>{careersHeaderData.email}</span>
               </a>
             </div>
           </div>
 
-          {/* Right Now Hiring Visual Graphic matching Screenshot */}
-          <div className="lg:col-span-5 relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-white/15 shadow-xl group">
+          {/* Right Now Hiring Visual Graphic */}
+          <div className="lg:col-span-5 relative h-56 sm:h-64 rounded-2xl overflow-hidden border border-[var(--primary)]/20 shadow-lg group">
             <Image
               src="/hero_interior.png"
               alt="Amaze PMS Now Hiring Corporate Recruitment"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#051336] via-[#051336]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--primary)]/90 via-[var(--primary)]/40 to-transparent" />
 
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-              <div className="w-16 h-16 rounded-2xl bg-cyan-500 text-slate-950 flex items-center justify-center font-extrabold shadow-2xl mb-2 animate-bounce">
+              <div className="w-16 h-16 rounded-2xl bg-[var(--secondary)] text-[var(--white)] flex items-center justify-center font-extrabold shadow-xl mb-2">
                 <Briefcase className="w-8 h-8" />
               </div>
-              <span className="text-lg font-black tracking-widest uppercase text-white font-mono">
+              <span className="text-lg font-black tracking-widest uppercase text-[var(--white)] font-mono">
                 NOW HIRING
               </span>
-              <span className="text-xs font-medium text-cyan-300">
+              <span className="text-xs font-medium text-[var(--white)]/90">
                 Join PAN India's Premier Property Management Team
               </span>
             </div>
@@ -122,12 +119,12 @@ export function OpeningsList() {
 
         {/* Section Heading: Current Openings */}
         <div className="space-y-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-white/10 pb-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-[var(--primary)]/15 pb-4">
             <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-bold text-[var(--primary)] tracking-tight">
                 Current Openings
               </h3>
-              <p className="text-xs text-slate-400 font-mono">
+              <p className="text-xs text-[var(--black)]/60 font-mono">
                 {filteredJobs.length} active positions available
               </p>
             </div>
@@ -140,8 +137,8 @@ export function OpeningsList() {
                   onClick={() => setActiveTab(cat)}
                   className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
                     activeTab === cat
-                      ? "bg-cyan-500 text-slate-950 font-bold scale-105"
-                      : "bg-white/5 text-slate-300 border border-white/10 hover:text-white"
+                      ? "bg-[var(--primary)] text-[var(--white)] font-bold scale-105"
+                      : "bg-[var(--primary)]/5 text-[var(--black)]/80 border border-[var(--primary)]/15 hover:text-[var(--primary)]"
                   }`}
                 >
                   {cat}
@@ -150,7 +147,7 @@ export function OpeningsList() {
             </div>
           </div>
 
-          {/* 14 Current Openings Cards Grid matching Screenshot */}
+          {/* 14 Current Openings Cards Grid */}
           <div
             ref={containerRef}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
@@ -176,3 +173,4 @@ export function OpeningsList() {
 }
 
 export default OpeningsList;
+
