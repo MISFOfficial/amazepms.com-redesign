@@ -1,8 +1,8 @@
 import React from "react";
-import HeroSection from "./Components/HeroSection/HeroSection";
+
 import ContactDetails from "./Components/ContactDetails/ContactDetails";
-import GoogleMapSection from "./Components/GoogleMapSection/GoogleMapSection";
 import CallBanner from "../Components/CallBanner/CallBanner";
+import PropertyPattern from "@/app/Global/Patterns/PropertyPattern";
 
 export const metadata = {
   title: "Contact Us | Amaze PMS - Property Management Solutions",
@@ -12,17 +12,12 @@ export const metadata = {
 
 function page() {
   return (
-    <div>
-      {/* 1. Page Banner Hero */}
-      <HeroSection />
-
-      {/* 2. Services List, Corporate Address & Contact Form */}
+    <div className="relative">
+      <PropertyPattern />
+      {/* 2. Services List, Corporate Address, Contact Form & Google Map */}
       <ContactDetails />
 
-      {/* 3. Interactive Google Map Location */}
-      <GoogleMapSection />
-
-      {/* 4. Contact Banner CTA */}
+      {/* 3. Contact Banner CTA */}
       <CallBanner />
     </div>
   );

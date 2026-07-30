@@ -1,9 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 import PropertyPattern from "@/app/Global/Patterns/PropertyPattern";
 
 export function HeroSection() {

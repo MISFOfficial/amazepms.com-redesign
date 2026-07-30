@@ -5,10 +5,11 @@ import Image from "next/image";
 import { MapPin, Phone, Mail, CheckCircle2 } from "lucide-react";
 import { contactInfoData } from "./components/Content";
 import ContactForm from "./components/ContactForm";
+import GoogleMapSection from "../GoogleMapSection/GoogleMapSection";
 
 export function ContactDetails() {
   return (
-    <section className="relative w-full bg-[var(--white)] py-16 sm:py-24 border-b border-[var(--primary)]/10 overflow-hidden text-[var(--black)]">
+    <section className="relative w-full py-16 sm:py-24 border-b border-[var(--primary)]/10 overflow-hidden text-[var(--black)]">
       <div className="ratio relative z-10 space-y-12">
         {/* Main Grid: Left Services & Right Office Info */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -152,9 +153,14 @@ export function ContactDetails() {
           </div>
         </div>
 
-        {/* Contact Form Container */}
-        <div className="max-w-3xl mx-auto pt-4">
-          <ContactForm />
+        {/* Contact Form & Google Map Side-by-Side 2-Column Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch pt-4">
+          <div className="lg:col-span-6 flex flex-col justify-between">
+            <ContactForm />
+          </div>
+          <div className="lg:col-span-6 flex flex-col justify-between">
+            <GoogleMapSection />
+          </div>
         </div>
       </div>
     </section>
