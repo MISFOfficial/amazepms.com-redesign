@@ -33,83 +33,81 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ item }) => {
   const renderIcon = () => {
     switch (item.iconType) {
       case "security":
-        return <ShieldCheck className="w-6 h-6 text-cyan-400" />;
+        return <ShieldCheck className="w-6 h-6 text-[var(--secondary)]" />;
       case "housekeeping":
-        return <Home className="w-6 h-6 text-cyan-400" />;
+        return <Home className="w-6 h-6 text-[var(--secondary)]" />;
       case "technical":
-        return <Wrench className="w-6 h-6 text-cyan-400" />;
+        return <Wrench className="w-6 h-6 text-[var(--secondary)]" />;
       case "pest":
-        return <Bug className="w-6 h-6 text-cyan-400" />;
+        return <Bug className="w-6 h-6 text-[var(--secondary)]" />;
       case "helpdesk":
-        return <Headphones className="w-6 h-6 text-cyan-400" />;
+        return <Headphones className="w-6 h-6 text-[var(--secondary)]" />;
       case "gardening":
-        return <Sprout className="w-6 h-6 text-cyan-400" />;
+        return <Sprout className="w-6 h-6 text-[var(--secondary)]" />;
       case "pool":
-        return <Waves className="w-6 h-6 text-cyan-400" />;
+        return <Waves className="w-6 h-6 text-[var(--secondary)]" />;
       case "clubhouse":
-        return <Building className="w-6 h-6 text-cyan-400" />;
+        return <Building className="w-6 h-6 text-[var(--secondary)]" />;
       case "facade":
-        return <Sparkles className="w-6 h-6 text-cyan-400" />;
+        return <Sparkles className="w-6 h-6 text-[var(--secondary)]" />;
       case "tenant":
-        return <Users className="w-6 h-6 text-cyan-400" />;
+        return <Users className="w-6 h-6 text-[var(--secondary)]" />;
       case "homerepairs":
-        return <Search className="w-6 h-6 text-cyan-400" />;
+        return <Search className="w-6 h-6 text-[var(--secondary)]" />;
       case "events":
-        return <PartyPopper className="w-6 h-6 text-cyan-400" />;
+        return <PartyPopper className="w-6 h-6 text-[var(--secondary)]" />;
       case "officestaff":
-        return <UserCheck className="w-6 h-6 text-cyan-400" />;
+        return <UserCheck className="w-6 h-6 text-[var(--secondary)]" />;
       case "payroll":
-        return <CreditCard className="w-6 h-6 text-cyan-400" />;
+        return <CreditCard className="w-6 h-6 text-[var(--secondary)]" />;
       case "repairmaint":
-        return <Cog className="w-6 h-6 text-cyan-400" />;
+        return <Cog className="w-6 h-6 text-[var(--secondary)]" />;
       case "homecleaning":
-        return <Paintbrush className="w-6 h-6 text-cyan-400" />;
+        return <Paintbrush className="w-6 h-6 text-[var(--secondary)]" />;
       case "maid":
-        return <Sparkle className="w-6 h-6 text-cyan-400" />;
+        return <Sparkle className="w-6 h-6 text-[var(--secondary)]" />;
       case "parking":
-        return <Car className="w-6 h-6 text-cyan-400" />;
+        return <Car className="w-6 h-6 text-[var(--secondary)]" />;
       case "revenue":
-        return <TrendingUp className="w-6 h-6 text-cyan-400" />;
+        return <TrendingUp className="w-6 h-6 text-[var(--secondary)]" />;
     }
   };
 
   return (
-    <div className="property-service-card group relative bg-[#071330] rounded-2xl p-5 sm:p-6 border border-blue-900/40 shadow-xl hover:border-cyan-500/50 hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between h-full">
-      {/* Background Radial Glow */}
-      <div className="absolute -right-10 -bottom-10 w-36 h-36 bg-blue-600/10 rounded-full blur-2xl group-hover:bg-cyan-500/20 transition-all duration-500 pointer-events-none" />
-
+    <div className="property-service-card group relative bg-[var(--white)] rounded-2xl p-5 sm:p-6 border border-[var(--primary)]/20 shadow-xl hover:border-[var(--secondary)] hover:shadow-2xl transition-all duration-500 overflow-hidden flex flex-col justify-between h-full text-[var(--black)]">
       <div>
         {/* Top Header: Badge + Number */}
         <div className="flex items-center justify-between gap-2 mb-4">
-          <span className="text-[10px] font-mono font-bold text-cyan-300 uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-blue-950/90 border border-cyan-500/30">
+          <span className="text-[10px] font-mono font-bold text-[var(--primary)] uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[var(--primary)]/10 border border-[var(--primary)]/20">
             {item.category}
           </span>
-          <span className="text-xs font-mono font-bold text-slate-500">
+          <span className="text-xs font-mono font-bold text-[var(--black)]/50">
             {item.number}/19
           </span>
         </div>
 
         {/* Icon & Title */}
         <div className="flex items-center gap-3.5 mb-2">
-          <div className="w-11 h-11 rounded-xl bg-blue-950/80 border border-cyan-500/30 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all duration-300 shadow-inner">
+          <div className="w-11 h-11 rounded-xl bg-[var(--primary)]/10 border border-[var(--primary)]/20 flex items-center justify-center shrink-0 group-hover:scale-110 transition-all duration-300 shadow-inner">
             {renderIcon()}
           </div>
 
-          <h3 className="text-base sm:text-lg font-bold text-white tracking-tight group-hover:text-cyan-300 transition-colors leading-snug">
+          <h3 className="text-base sm:text-lg font-bold text-[var(--primary)] tracking-tight group-hover:text-[var(--secondary)] transition-colors leading-snug">
             {item.title}
           </h3>
         </div>
       </div>
 
       {/* Footer Arrow & Accent Line */}
-      <div className="pt-3 mt-3 border-t border-white/10 flex items-center justify-between">
-        <span className="text-[11px] font-mono text-slate-400 group-hover:text-slate-200 transition-colors">
+      <div className="pt-3 mt-3 border-t border-[var(--primary)]/15 flex items-center justify-between">
+        <span className="text-[11px] font-mono text-[var(--black)]/70 transition-colors font-medium">
           Full Operational Support
         </span>
-        <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+        <ArrowUpRight className="w-4 h-4 text-[var(--primary)] group-hover:text-[var(--secondary)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
       </div>
     </div>
   );
 };
 
 export default ServiceCard;
+
