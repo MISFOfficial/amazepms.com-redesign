@@ -17,7 +17,7 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
       case "amaze":
         return (
           <div className="flex flex-col items-center justify-center text-center space-y-1">
-            <div className="relative w-40 h-16">
+            <div className="relative w-56 h-28 sm:w-60 sm:h-32">
               <Image
                 src="/logo.png"
                 alt="Amaze Property Management Solutions"
@@ -29,22 +29,28 @@ export const PartnerCard: React.FC<PartnerCardProps> = ({ partner }) => {
         );
       case "action_force":
         return (
-          <div className="w-24 h-24 rounded-full bg-[var(--primary)] border-4 border-[var(--primary)]/80  flex flex-col items-center justify-center text-[var(--white)] text-center p-2">
-            <Shield className="w-8 h-8 text-[var(--secondary)] mb-0.5" />
-            <span className="text-[9px] font-extrabold tracking-widest uppercase font-mono">
-              ACTION FORCE
-            </span>
+          <div className="flex flex-col items-center justify-center text-center space-y-1">
+            <div className="relative w-56 h-28 sm:w-60 sm:h-32">
+              <Image
+                src="/Af.png"
+                alt="Action Force Security Services"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         );
       case "afs":
         return (
-          <div className="w-24 h-24 rounded-full bg-[var(--primary)]  flex flex-col items-center justify-center text-[var(--white)] text-center p-2 border-2 border-[var(--secondary)]">
-            <span className="text-xl font-black tracking-tighter font-sans text-[var(--secondary)]">
-              AFS
-            </span>
-            <span className="text-[8px] font-bold tracking-widest uppercase text-[var(--white)]">
-              FACILITY
-            </span>
+          <div className="flex flex-col items-center justify-center text-center space-y-1">
+            <div className="relative w-56 h-28 sm:w-60 sm:h-32">
+              <Image
+                src="/AFS.png"
+                alt="AFS Facility Services"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         );
     }
