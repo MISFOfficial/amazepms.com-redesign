@@ -6,18 +6,9 @@ import { Sparkles } from "lucide-react";
 export const HeroHeaderTitle: React.FC = () => {
   return (
     <div className="space-y-3 max-w-3xl mx-auto text-center">
-      {/* Top Tagline Badge */}
-      <div className="inline-flex items-center gap-2 px-3.5 py-1 bg-[var(--primary)]/10 border border-[var(--primary)]/20 text-[var(--primary)] text-[11px] font-mono font-semibold uppercase tracking-widest rounded-full">
-        <Sparkles className="w-3.5 h-3.5 text-[var(--secondary)]" />
-        <span>WHO WE ARE</span>
-      </div>
-
       {/* Main Page Title */}
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[var(--black)] tracking-tight leading-tight">
-        About{" "}
-        <span className="text-[var(--secondary)]">
-          Amaze PMS
-        </span>
+        About <span className="text-[var(--secondary)]">Amaze PMS</span>
       </h1>
 
       {/* Short Clean Subtitle */}
@@ -31,4 +22,3 @@ export const HeroHeaderTitle: React.FC = () => {
 };
 
 export default HeroHeaderTitle;
-
